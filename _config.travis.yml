@@ -11,9 +11,9 @@ title                    : "Segment Routing"
 title_separator          : "-"
 name                     : &name "Cisco Systems Inc"
 description              : &description "Documentation, Blogs and Tutorials for all things Segment Routing "
-url                      : "http://www.segment-routing.net" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
-gh_repo                  : "https://github.com/xrdocs/segment-routing"
+url                      : "https://kmichiel.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : "/segment-routing" # the subpath of your site, e.g. "/blog"
+gh_repo                  : "https://github.com/kmichiel/segment-routing"
 teaser                   : "/images/sr-teaser-icon.jpg" # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 logo                     : "/images/sr-logo-blue.png"
 breadcrumbs              : false # true, false (default)
@@ -72,7 +72,7 @@ exclude:
   - Rakefile
   - README
   - tmp
-exclude: ["vendor"]
+
 keep_files:
   - .git
   - .svn
@@ -119,7 +119,7 @@ collections:
     permalink: /:collection/:path/
   demos:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:collection/:path/    
 
 # Defaults
 defaults:
@@ -172,7 +172,7 @@ defaults:
       read_time: false
       related: true
       position: "top"
-# _news
+# _demos
   - scope:
       path: ""
       type: demos
@@ -186,7 +186,7 @@ defaults:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: Australia/ACT# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:  Europe/Madrid# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 future: true
 
 # Plugins
@@ -410,5 +410,5 @@ compress_html:
   ignore:
     envs: development
 
-host: "0.0.0.0"
+host: "127.0.0.1"
 port: 4000
