@@ -10,22 +10,20 @@
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
 
-    {% include browser-upgrade.html %}
+    {% comment %} customize navigation for the different pages
+    {% if page.url contains 'SRv6' %}
+        {% include masthead.html nav = 'srv6' %}
+    {% else %}
+        {% include masthead.html nav = 'srmpls' %}
+    {% endif %}
+    {% endcomment %}
     {% include masthead.html %}
 
-    <div class="page__hero--overlay" style="background-image: url('images/home/hero.jpg');">
-      <div class="wrapper" style="text-align:center;">
-        <h1 class="page__title" itemprop="headline" style="">
-            Segment Routing   
-        </h1>
-          <p class="page__lead" style="text-align:center;">A source-routing architecture that seeks the right balance between distributed intelligence and centralized optimization.</br>The application steers its packets through an ordered list of instructions and realizes end-to-end policy without creating any per-flow state in the network. </p>
-          <p>
-            <a href="/tutorials/" class="btn btn--large"><i class='fa fa-step-forward'></i> Get Started!</a> 
-            <a href="https://www.youtube.com/watch?v=_T8d29RhJsQ" class="btn btn--large" data-lity><i class='fa fa-play-circle-o'></i> SRv6 video</a>
-            <a href="/images/sr_momentum.pdf" class="btn btn--large" data-lity><i class='fa fa-eye'></i> SR Customer Quotes</a>
-          </p>
-      </div>
-    </div>
+    {% include browser-upgrade.html %}
+
+    {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+      {% include new-page__hero.html %}
+    {% endif %}
 
     <div id="main" role="main">
       <article class="splash" itemscope itemtype="http://schema.org/CreativeWork">

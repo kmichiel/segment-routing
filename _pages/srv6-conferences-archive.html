@@ -1,0 +1,12 @@
+---
+layout: archive-full
+permalink: /SRv6/conferences/
+title: "Conferences and Events"
+---
+<h1>SRv6</h1>
+<div class="grid__wrapper">
+  {% assign sorted = (site.conferences | sort: 'date') %}
+  {% for post in sorted reversed %}
+    {% include archive-single.html type="grid" %}
+  {% endfor %}
+</div>

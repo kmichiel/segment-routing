@@ -1,0 +1,12 @@
+---
+layout: archive-full
+permalink: /SRv6/news/
+title: "News & blog entries"
+---
+
+{% include base_path %}
+<h1>SRv6</h1>
+{% assign sorted = (site.news | sort: post.date | reverse) %}
+{% for post in sorted %}
+  {% include news-list %}
+{% endfor %}

@@ -1,0 +1,83 @@
+---
+---
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+
+    {% include browser-upgrade.html %}
+    {% include masthead-splash.html nav="splash" %}
+
+    <style>
+	    .flex-container-row {
+		    display: flex;
+		    flex-direction: row;
+		    flex-wrap: nowrap;
+	    }
+	    .flex-container-column {
+		    display: flex;
+		    flex-direction: column;
+		    flex-wrap: nowrap;
+	    }
+	    .flex-container-row .wrapper {
+		    flex: 0 0 50%;
+	    }
+    </style>
+    <div class="page__hero--overlay flex-container-column" style="background-image: url('{{ "/images/home/hero.jpg" | relative_url }}');">
+      <div class="wrapper" style="text-align:center;">
+        <h1 class="page__title" itemprop="headline" style="">
+            Segment Routing 
+        </h1>
+      </div>
+      <div class="wrapper flex-container-row">
+          <div class="wrapper" style="text-align:center;">
+            <h1 class="page__title" itemprop="headline" style="">
+		    <a href="/SRv6/">SRv6</a>
+            </h1>
+    	{% if page.excerpt %}<p class="page__lead" style="text-align:center;">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>{% endif %}
+              <p>
+                <a href="/tutorials/" class="btn btn--large"><i class='fa fa-step-forward'></i> Get Started!</a> 
+                <a href="https://www.youtube.com/watch?v=_T8d29RhJsQ" class="btn btn--large" data-lity><i class='fa fa-play-circle-o'></i> SRv6 video</a>
+                <a href="/images/sr_momentum.pdf" class="btn btn--large" data-lity><i class='fa fa-eye'></i> SR Customer Quotes</a>
+              </p>
+          </div>
+          <div class="wrapper" style="text-align:center;">
+            <h1 class="page__title" itemprop="headline" style="">
+		    <a href="/SRMPLS/">SR MPLS</a>
+            </h1>
+    	{% if page.excerpt %}<p class="page__lead" style="text-align:center;">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>{% endif %}
+              <p>
+                <a href="/tutorials/" class="btn btn--large"><i class='fa fa-step-forward'></i> Get Started!</a> 
+                <a href="https://www.youtube.com/watch?v=_T8d29RhJsQ" class="btn btn--large" data-lity><i class='fa fa-play-circle-o'></i> SRv6 video</a>
+                <a href="/images/sr_momentum.pdf" class="btn btn--large" data-lity><i class='fa fa-eye'></i> SR Customer Quotes</a>
+              </p>
+          </div>
+      </div>
+    </div>
+
+    <div id="main" role="main">
+      <article class="splash" itemscope itemtype="http://schema.org/CreativeWork">
+        {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+        {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+
+        <section class="page__content" itemprop="text">
+          {{ content }}
+        </section>
+      </article>
+    </div>
+
+    <div class="page__footer">
+      <footer>
+        {% include footer.html %}
+      </footer>
+    </div>
+
+    {% include scripts.html %}
+
+  </body>
+</html>

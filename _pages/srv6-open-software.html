@@ -1,0 +1,20 @@
+---
+layout: archive-full
+permalink: /SRv6/open-software/
+title: "Open Software Projects"
+---
+<h1>SRv6</h1>
+<div class="feature__wrapper">
+  {% assign sorted = (site.open-software | where:"app","false" | sort: 'title') %}
+  {% for post in sorted %}
+    {% include archive-single.html type="grid" %}
+  {% endfor %}
+</div>
+
+<h2 id="openapps">SR-aware applications</h2>
+<div class="feature__wrapper">
+  {% assign sorted = (site.open-software | where:"app","true" | sort: 'title') %}
+  {% for post in sorted %}
+    {% include archive-single.html %}
+  {% endfor %}
+</div>

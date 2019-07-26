@@ -1,11 +1,5 @@
-{% comment %} customize navigation for the different pages {% endcomment %}
-{% if page.url contains 'SRv6' %}
-    {% assign navigation = site.data.navigation['srv6'] %}
-{% else %}
-    {% assign navigation = site.data.navigation['srmpls'] %}
-{% endif %}
-
-<!-- navigation: {{ navigation }} -->
+{% assign navigation = site.data.navigation[include.nav] %}
+<!-- using {{ navigation }} -->
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">

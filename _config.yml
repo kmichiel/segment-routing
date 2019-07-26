@@ -12,7 +12,7 @@ title_separator          : "-"
 name                     : &name "Cisco Systems Inc"
 description              : &description "Documentation, Blogs and Tutorials for all things Segment Routing "
 url                      : "https://kmichiel.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "/segment-routing" # the subpath of your site, e.g. "/blog"
+baseurl                  : "" # the subpath of your site, e.g. "/blog"
 gh_repo                  : "https://github.com/kmichiel/segment-routing"
 teaser                   : "/images/sr-teaser-icon.jpg" # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 logo                     : "/images/sr-logo-blue.png"
@@ -120,6 +120,24 @@ collections:
   demos:
     output: true
     permalink: /:collection/:path/    
+  srv6-tutorials:
+    output: false
+    permalink: /SRv6/:collection/:path/
+  srv6-conferences:
+    output: false
+    permalink: /SRv6/:collection/:path/
+  srv6-open-software:
+    output: false
+    permalink: /SRv6/:collection/:path/
+  srv6-scientific-papers:
+    output: false
+    permalink: /SRv6/:collection/:path/
+  srv6-news:
+    output: false
+    permalink: /SRv6/news/:path/
+  srv6-demos:
+    output: false
+    permalink: /SRv6/demos/:path/
 
 # Defaults
 defaults:

@@ -1,26 +1,44 @@
 ---
 layout: homepage
-permalink: /
+permalink: /SRMPLS/
 sitemap: true
 date: null
-excerpt: The application steers its packets through an ordered list of instructions and realizes end-to-end policy without creating any per-flow state in the network.
+excerpt: |
+  Some text about SR MPLS
+
+  A source-routing architecture that seeks the right balance between distributed intelligence and centralized optimization. <br/>
+
+  The application steers its packets through an ordered list of instructions and realizes end-to-end policy without creating any per-flow state in the network.
+
+title: SR MPLS
+header:
+  overlay_image: /images/home/hero.jpg
+  KMoverlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
+  KMcaption: "Photo credit: [**Unsplash**](https://unsplash.com)"
+  cta:
+    - cta_label: "<i class='fa fa-step-forward'></i> Get Started!"
+      cta_url: /tutorials
+    - cta_label: "<i class='fa fa-play-circle-o'></i> SRv6 video"
+      cta_url: "https://www.youtube.com/watch?v=_T8d29RhJsQ"
+    - cta_label: "<i class='fa fa-eye'></i> SR Customer Quotes"
+      cta_url: "/images/sr_momentum.pdf"
 
 feature_row_benefits:
   - title: Simple
-    image_path: images/home/icon-simplicity.png
+    image_path: /images/home/icon-simplicity.png
     excerpt: >-
       Segment Routing provides complete control over the forwarding paths by combining simple network instructions. It does not require any additional protocol. Indeed in some cases it removes unnecessary protocols simplifying your network.
   - title: Scalable
-    image_path: images/home/icon-scalability.png
+    image_path: /images/home/icon-scalability.png
     excerpt: >-
       Segment routing does not require any path signaling. Hence, per-flow state only needs to be maintained at the ingress node of the SR domain increasing your network flexibility while reducing cost.
   - title: Seamless deployment
-    image_path: images/home/icon-integration.png
+    image_path: /images/home/icon-integration.png
     excerpt: >-
       Segment Routing runs natively on an MPLS or IPv6 data plane. A simple software upgrade will enable your hardware to run it. Also, Segment Routing can coexist with your existing LDP network, making the migration painless.
 
 feature_row_te:
-  - image_path: images/home/te.png
+  - image_path: /images/home/te.png
     title: 'Traffic Engineering'
     excerpt: >-
       Segment Routing can be used to steer traffic along any arbitrary path in the network. This allows operators to enforce low-latency and / or disjoint paths, regardless of the normal forwarding paths.
@@ -29,13 +47,13 @@ feature_row_te:
       SR achieves this without any additional signaling or midpoint fabric-state!
 
 feature_row_e2e:
-  - image_path: images/home/end2end.png
+  - image_path: /images/home/end2end.png
     title: 'Unified Forwarding Plane'
     excerpt: >-
       Segment Routing is capable of creating inter-domain policies. This way you can take advantage of the path-expressivity while keeping your DC, Metro and WAN domains independent.
 
 feature_row_odn:
-  - image_path: images/home/odn.png
+  - image_path: /images/home/odn.png
     title: 'On-Demand Next Hop'
     excerpt: >-
       An edge router upon service configuration automatically request to the Segment Routing PCE an inter-domain path to the remote service endpoint. The path can either be for simple best effort inter-domain reachability or for reachability with SLA contract. 
@@ -44,7 +62,7 @@ feature_row_odn:
       The path is expressed uniquely as a list of segments. There is no need for BGP route injection. This architecture is scalable since the node will only get the exact path it needs.
 
 feature_row_frr:
-  - image_path: images/home/ti-lfa.png
+  - image_path: /images/home/ti-lfa.png
     title: 'Failure Protection'
     excerpt: >-
       The Segment Routing-based fast-reroute solution, TI-LFA, can provide per-destination sub-50msec protection upon any single link, node or SRLG failure regardless the topology. The traffic is rerouted straight to the post-convergence path, hence avoiding any intermediate flap via an intermediate path. The primary and backup path computation is completely automatic by the IGP.
@@ -52,13 +70,13 @@ feature_row_frr:
     btn_class: btn--large
 
 feature_row_np:
-  - image_path: images/home/netprog.png
+  - image_path: /images/home/netprog.png
     title: 'Network Programming'
     excerpt: >-
       The IPv6 flavor of Segment Routing allows user-defined functions to be associated with segments. By leveraging the IPv6 SID format and the dedicated Segment Routing Extension Header, these functions may implement any computable behavior allowing for Network Function Virtualization.
 
 feature_row_book:
-  - image_path: images/sr-book-combined.png
+  - image_path: /images/sr-book-combined.png
     image_width: 300px
     title: 'Segment Routing, Part 1'
     excerpt: >-
@@ -70,6 +88,7 @@ feature_row_book:
 
 published: true
 ---
+
 {% include feature_row id="feature_row_benefits" %}
 {% include feature_row id="feature_row_te" type="right" %}
 {% include feature_row id="feature_row_e2e" type="left" %}
@@ -81,7 +100,7 @@ published: true
   <div class="feature__item--left">
     <div class="archive__item">
       <div class="archive__item-teaser">
-        <img src="{{ 'images/sr-book-part1.jpg' | relative_url }}" alt="SR book part I" style="width:calc(50% - 3px); max-width:200px; margin-right:6px;"><img src="{{ 'images/sr-book-part2.jpg' | relative_url }}" alt="SR book part II" style="width:calc(50% - 3px); max-width:200px;">
+        <img src="{{ '/images/sr-book-part1.jpg' | relative_url }}" alt="SR book part I" style="width:calc(50% - 3px); max-width:200px; margin-right:6px;"><img src="{{ '/images/sr-book-part2.jpg' | relative_url }}" alt="SR book part II" style="width:calc(50% - 3px); max-width:200px;">
       </div>
       <div class="archive__item-body">
         <h2 class="archive__item-title">Segment Routing book series</h2>

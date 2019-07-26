@@ -1,0 +1,113 @@
+{% comment %}
+items used in this page:
+header.image
+header.cta_url
+header.cta_label
+header.vid_url
+header.vid_label
+header.overlay_image
+header.overlay_filter
+header.overlay_color
+page.title
+page.excerpt
+header.caption
+
+KM:
+cta_style: style of button, was: btn--light-outline
+cta_label can contain a FontAwesome icon on the button, e.g.  <i class='fa fa-step-forward'></i>
+
+Example from website:
+excerpt: "This post should [...]"
+header:
+  overlay_image: unsplash-image-1.jpg
+  overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
+  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
+  cta_label: "More Info"
+  cta_url: "https://unsplash.com"
+
+{% endcomment %}
+
+{% assign cta_style="" %}
+
+{% comment %} get the proper image URL {% endcomment %}
+{% if page.header.image contains "://" %}
+  {% capture img_path %}{{ page.header.image }}{% endcapture %}
+{% else %}
+  {% capture img_path %}{{ page.header.image | relative_url }}{% endcapture %}
+{% endif %}
+
+{% comment %} get the proper button URL {% endcomment %}
+{% comment %} can we have multiple buttons? {% endcomment %}
+{% if page.header.cta_url contains "://" %}
+  {% capture cta_path %}{{ page.header.cta_url }}{% endcapture %}
+{% else %}
+  {% capture cta_path %}{{ page.header.cta_url | relative_url }}{% endcapture %}
+{% endif %}
+
+{% comment %} get the proper video URL {% endcomment %}
+{% if page.header.vid_url contains "://" %}
+  {% capture vid_path %}{{ page.header.vid_url }}{% endcapture %}
+{% else %}
+  {% capture vid_path %}{{ page.header.vid_url | relative_url }}{% endcapture %}
+{% endif %}
+
+{% comment %} get the proper overlay image URL {% endcomment %}
+{% if page.header.overlay_image contains "://" %}
+  {% capture overlay_img_path %}{{ page.header.overlay_image }}{% endcapture %}
+{% elsif page.header.overlay_image %}
+  {% capture overlay_img_path %}{{ page.header.overlay_image | relative_url }}{% endcapture %}
+{% endif %}
+
+{% if page.header.overlay_filter contains "rgba" %}
+  {% capture overlay_filter %}{{ page.header.overlay_filter }}{% endcapture %}
+{% elsif page.header.overlay_filter %}
+  {% capture overlay_filter %}rgba(0, 0, 0, {{ page.header.overlay_filter }}){% endcapture %}
+{% endif %}
+
+<style>
+.page__hero--overlay .wrapper {
+	text-align: center;
+}
+</style>
+
+<div class="page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %}"
+  style="{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url('{{ overlay_img_path }}');{% endif %}"
+>
+  {% if page.header.overlay_color or page.header.overlay_image %}
+    <div class="wrapper">
+      <h1 class="page__title" itemprop="headline">
+        {% if paginator %}
+          {{ site.title }}{% unless paginator.page == 1 %} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}
+        {% else %}
+          {{ page.title | default: site.title | markdownify | remove: "<p>" | remove: "</p>" }}
+        {% endif %}
+      </h1>
+      {% if page.excerpt %}
+        <p class="page__lead">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+      {% endif %}
+      {% if site.read_time and page.read_time %}
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
+      {% endif %}
+      {% if page.header.cta %}
+        <p>
+          {% for cta in page.header.cta %}
+              {% if cta.cta_url contains "://" %}
+                {% capture cta_path %}{{ cta.cta_url }}{% endcapture %}
+              {% else %}
+                {% capture cta_path %}{{ cta.cta_url | relative_url }}{% endcapture %}
+              {% endif %}
+	      <a href="{{ cta_path }}" class="btn {{ cta.cta_style }} btn--large">{{ cta.cta_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a>
+              {% if page.header.vid_url %}
+	          <a href="{{ vid_path }}" class="btn {{ cta.cta_style }} btn--large" data-lity>{{ cta.vid_label | default: site.data.ui-text[site.locale].more_label | default: "Watch Video" }}</a>
+              {% endif %}
+	  {% endfor %}
+        </p>
+      {% endif %}
+    </div>
+  {% else %}
+    <img src="{{ img_path }}" alt="{{ page.title }}" class="page__hero-image">
+  {% endif %}
+  {% if page.header.caption %}
+    <span class="page__hero-caption">{{ page.header.caption | markdownify | remove: "<p>" | remove: "</p>" }}</span>
+  {% endif %}
+</div>

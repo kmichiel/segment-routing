@@ -27,3 +27,73 @@ main:
 
 #  - title: "Search"
 #    url: "/search/"
+
+# navigation on splash page
+splash:
+
+  - title: "SR MPLS"
+    url: "/SRMPLS/"
+
+  - title: "SRv6"
+    url: "/SRv6/"
+
+# navigation on SR MPLS pages
+srmpls:
+
+  - title: "SRv6"
+    url: "/../SRv6/"
+
+  - title: "News"
+    url: "/news/"
+
+  - title: "Demos"
+    url: "/demos/"
+
+  - title: "Tutorials"
+    url: "/tutorials/"
+
+  - title: "Conferences"
+    short: "Conf"
+    url: "/conferences/"
+
+  - title: "IETF"
+    url: "/ietf/"
+
+  - title: "Open Software"
+    short: "Open SW"
+    url: "/open-software/"
+
+  - title: "Scientific Papers"
+    short: "Acad"
+    url: "/scientific-papers/"
+
+# navigation on SRv6 pages
+srv6:
+
+  - title: "SR-MPLS"
+    url: "/../SRMPLS/"
+
+  - title: "News"
+    url: "/SRv6/news/"
+
+  - title: "Demos"
+    url: "/SRv6/demos/"
+
+  - title: "Tutorials"
+    url: "/SRv6/tutorials/"
+
+  - title: "Conferences"
+    short: "Conf"
+    url: "/SRv6/conferences/"
+
+  - title: "IETF"
+    url: "/SRv6/ietf/"
+
+  - title: "Open Software"
+    short: "Open SW"
+    url: "/SRv6/open-software/"
+
+  - title: "Scientific Papers"
+    short: "Acad"
+    url: "/SRv6/scientific-papers/"
+

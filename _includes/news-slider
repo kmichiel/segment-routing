@@ -1,0 +1,108 @@
+{% assign news_items = (site.news | sort: post.date | reverse) %}
+{% comment %}
+news item contains:
+title : title
+author : author
+source : where the news came from
+source-url : 
+eurl : title link
+excerpt : text description
+teaser : image
+{% endcomment %}
+
+<style>
+.km__container {
+	/*height: 200px; */
+	width: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+/*
+	-webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+*/
+}
+
+/*
+.km__container::-webkit-scrollbar {
+  display: none; }
+*/
+
+.km__item {
+	flex: 0 0 auto;
+	margin: 0;
+	margin-right: 3px;
+	background: rgba(100,100,100,0.1);
+	position: relative;
+	text-align: center;
+	max-width: 30%;
+	border-radius: 10px;
+}
+
+.km__item .archive__item-teaser img {
+    max-height: 110px;
+    width: auto;
+}
+
+.archive__item-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.archive__item-excerpt {
+    width: 80%;
+}
+
+.archive__item-excerpt p {
+    text-align: center;
+}
+
+</style>
+
+<div class="feature__wrapper km__container">
+
+  {% for f in news_items %}
+
+    {% if f.eurl contains "://" %}
+      {% capture f_url %}{{ f.eurl }}{% endcapture %}
+    {% else %}
+      {% capture f_url %}{{ f.eurl | relative_url }}{% endcapture %}
+    {% endif %}
+
+<!--    <div class="feature__item{% if include.type %}--{{ include.type }}{% endif %}">-->
+      <div class="archive__item km__item">
+        {% if f.teaser %}
+          <div class="archive__item-teaser">
+            <img src=
+              {% if f.teaser contains "://" %}
+                "{{ f.teaser }}"
+              {% else %}
+                "{{ f.teaser | relative_url }}"
+              {% endif %}
+            alt="{% if f.alt %}{{ f.alt }}{% endif %}" {% if f.image_width %} style="width:{{f.image_width}};"{% endif %}>
+          </div>
+        {% endif %}
+
+        <div class="archive__item-body">
+          {% if f.title %}
+            <h2 class="archive__item-title">{{ f.title }}</h2>
+          {% endif %}
+
+          {% if f.excerpt %}
+<!--
+            <div class="archive__item-excerpt">
+              {{ f.excerpt | markdownify }}
+            </div>
+-->
+          {% endif %}
+
+          {% if f.eurl %}
+            <p><a href="{{ f_url }}" class="btn {{ f.btn_class }}">{{ f.btn_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
+          {% endif %}
+        </div>
+      </div>
+<!--    </div>-->
+  {% endfor %}
+
+</div>
