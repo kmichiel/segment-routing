@@ -37,7 +37,7 @@
       <div class="wrapper flex-container-row">
           <div class="wrapper" style="text-align:center;">
             <h1 class="page__title" itemprop="headline" style="">
-		    <a href="/SRv6/">SRv6</a>
+		    <a href="{{ '/SRv6/' | relative_url }}">SRv6</a>
             </h1>
     	{% if page.excerpt %}<p class="page__lead" style="text-align:center;">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>{% endif %}
               <p>
@@ -48,7 +48,7 @@
           </div>
           <div class="wrapper" style="text-align:center;">
             <h1 class="page__title" itemprop="headline" style="">
-		    <a href="/SRMPLS/">SR MPLS</a>
+		    <a href="{{ '/SRMPLS/' | relative_url }}">SR MPLS</a>
             </h1>
     	{% if page.excerpt %}<p class="page__lead" style="text-align:center;">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>{% endif %}
               <p>

@@ -41,7 +41,7 @@ splash:
 srmpls:
 
   - title: "SRv6"
-    url: "/../SRv6/"
+    url: "/SRv6/"
 
   - title: "News"
     url: "/news/"
@@ -71,7 +71,7 @@ srmpls:
 srv6:
 
   - title: "SR-MPLS"
-    url: "/../SRMPLS/"
+    url: "/SRMPLS/"
 
   - title: "News"
     url: "/SRv6/news/"
