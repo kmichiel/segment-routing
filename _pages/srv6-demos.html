@@ -8,5 +8,5 @@ title: "It's demo time!"
 <h1>SRv6</h1>
 {% assign sorted = (site.demos | sort: post.date | reverse) %}
 {% for post in sorted %}
-  {% include demos-list %}
+  {% include demos-list subpage="#SRv6" %}
 {% endfor %}

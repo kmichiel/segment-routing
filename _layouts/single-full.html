@@ -6,11 +6,14 @@ layout: default
   {% include page__hero.html %}
 {% endif %}
 
+{% comment %}
+don't do breadcrumbs ...
 {% if page.url != "/" and site.breadcrumbs == "true" %}
     {% include breadcrumbs.html %}
 {% elsif page.url != "/" and page.breadnav %}
     {% include breadcrumbs.html %}
 {% endif %}
+{% endcomment %}
 
 <div id="main" role="main">
   <article class="splash" itemscope itemtype="http://schema.org/CreativeWork">

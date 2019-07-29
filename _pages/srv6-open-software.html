@@ -7,7 +7,7 @@ title: "Open Software Projects"
 <div class="feature__wrapper">
   {% assign sorted = (site.open-software | where:"app","false" | sort: 'title') %}
   {% for post in sorted %}
-    {% include archive-single.html type="grid" %}
+    {% include archive-single.html type="grid" subpage="#SRv6" %}
   {% endfor %}
 </div>
 
@@ -15,6 +15,6 @@ title: "Open Software Projects"
 <div class="feature__wrapper">
   {% assign sorted = (site.open-software | where:"app","true" | sort: 'title') %}
   {% for post in sorted %}
-    {% include archive-single.html %}
+    {% include archive-single.html subpage="#SRv6" %}
   {% endfor %}
 </div>
