@@ -13,6 +13,7 @@ At the [**MPLS WC 2019**](<https://www.uppersideconferences.com/mpls-sdn-nfv/mpl
 **Rizwan Jamal** of Equinix presents his SR deployment experience.
 
 ## Implementing 5G Application Intent using Segment Routing
+
 ### Rizwan Jamal, Principal Network Architect, Equinix
 
 #### video
