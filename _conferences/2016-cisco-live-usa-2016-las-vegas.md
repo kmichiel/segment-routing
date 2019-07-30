@@ -6,6 +6,9 @@ title: 'Cisco Live 2016, Las Vegas'
 header:
   teaser: 'https://www.dns-as.org/wp-content/uploads/2016/05/CiscoLiveLasVegas2016.jpg'
 author: Segment Routing Team
+categories:
+  - SRMPLS
+  - SRv6
 ---
 {% include toc icon="table" title="Cisco Live USA 2016" %}
 

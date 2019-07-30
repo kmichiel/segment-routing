@@ -7,6 +7,9 @@ author: Segment Routing Team
 excerpt: 'Jose Liste presents SR IGP Flexible Algorithms, the flexible tool in the SR-TE toolkit. Its functionality and its use-cases'
 header:
   teaser: 'https://img.youtube.com/vi/l_RThbdDnko/mqdefault.jpg'
+categories:
+  - SRMPLS
+  - SRv6
 ---    
        
 <iframe width="355" height="200" src="https://www.youtube.com/embed/l_RThbdDnko" frameborder="0" allowfullscreen></iframe>

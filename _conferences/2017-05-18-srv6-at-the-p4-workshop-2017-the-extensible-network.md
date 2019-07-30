@@ -9,6 +9,9 @@ excerpt: >-
   in Protocol and Data Plane Agility" at the P4 Workshop on May 17 2017.
 header:
   teaser: /images/p4-open-source-project.png
+categories:
+  - SRMPLS
+  - SRv6
 ---
 Bell Canada, Barefoot, and Cisco presented "The Extensible Network – Evolution in Protocol and Data Plane Agility" at the P4 Workshop on May 17 2017.
 

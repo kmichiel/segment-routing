@@ -7,6 +7,9 @@ author: Segment Routing Team
 excerpt: 'Rizwan Jamal of Equinix presents "Implementing 5G Application Intent using Segment Routing"'
 header:
   teaser: 'https://img.youtube.com/vi/hchiMeYLNuk/mqdefault.jpg'
+categories:
+  - SRMPLS
+  - SRv6
 ---
 
 At the [**MPLS WC 2019**](<https://www.uppersideconferences.com/mpls-sdn-nfv/mplswc2019_agenda_day_02_01.html>) in Paris, 

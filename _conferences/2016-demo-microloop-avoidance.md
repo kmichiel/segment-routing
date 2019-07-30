@@ -7,6 +7,9 @@ header:
   teaser: 'https://img.youtube.com/vi/7nfnp-dnUHk/mqdefault.jpg'
 excerpt: >-
   Watch Kris Michielsen's demonstration of Microloop Avoidance. Experience first hand how SR eliminates microloops, a day-1 problem of IP networks.
+categories:
+  - SRMPLS
+  - SRv6
 ---
 Watch Kris Michielsen's demonstration of Microloop Avoidance. Experience first hand how SR eliminates microloops, a day-1 problem of IP networks.
 

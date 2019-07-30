@@ -7,6 +7,9 @@ author: Segment Routing Team
 excerpt: 'In this cisco webinar Clarence Filsfils gives an overview on how Segment Routing for IPv6 helps Mass Scale Networking.'
 header:
   teaser: '/images/sr-logo-blue.png'
+categories:
+  - SRMPLS
+  - SRv6
 ---    
 Check out the webinar in this link:
 

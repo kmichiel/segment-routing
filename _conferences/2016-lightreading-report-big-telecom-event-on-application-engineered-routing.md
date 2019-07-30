@@ -7,6 +7,9 @@ title: Lightreading report Big telecom event on Application Engineered Routing
 excerpt: 'Lightreading''s Big Telecom Event, Austin, May 24 & 25, 2016 '
 header:
   teaser: /images/lightreading_bte.png
+categories:
+  - SRMPLS
+  - SRv6
 ---
   
 Watch Bertrand Duvivier from Cisco Systems talk about Application Engineered Routing at the Big Telecom Event (BTE 2015) as part of the lightreading report:  

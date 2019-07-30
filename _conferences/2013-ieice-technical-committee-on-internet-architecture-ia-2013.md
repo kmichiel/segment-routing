@@ -7,6 +7,9 @@ title: 'IEICE Technical Committee on Internet Architecture(IA)  2013 '
 excerpt: Moving towards an SDN era for the Network with Segment Routing
 header:
   teaser: /images/ieice_2013_sdn.png
+categories:
+  - SRMPLS
+  - SRv6
 ---
 
 ## Moving towards a Software Defined Network with Segment Routing

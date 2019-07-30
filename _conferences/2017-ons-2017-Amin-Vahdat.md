@@ -7,6 +7,9 @@ author: Segment Routing Team
 excerpt: 'Amin Vahdat, Fellow & Technical Lead For Networking, Google'
 header:
   teaser: 'https://img.youtube.com/vi/1xBZ5DGZZmQ/mqdefault.jpg'
+categories:
+  - SRMPLS
+  - SRv6
 ---    
 
        

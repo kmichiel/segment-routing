@@ -7,6 +7,9 @@ author: Segment Routing Team
 excerpt: 'Mark Ferreira of Bell Canada presents "SR-aware SD-WAN: Enabling End-to-end Application-responsive Networking"'
 header:
   teaser: 'https://img.youtube.com/vi/kANeJhY5doA/mqdefault.jpg'
+categories:
+  - SRMPLS
+  - SRv6
 ---
 
 At the [**MPLS WC 2019**](<https://www.uppersideconferences.com/mpls-sdn-nfv/mplswc2019_agenda_day_02_01.html>) in Paris,

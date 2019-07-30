@@ -7,6 +7,9 @@ author: Segment Routing Team
 excerpt: 'Watch Clarence Filsfils at the SD-WAN Summit 2017 explaining the benefits of SRv6 for the SD-WAN!'
 header:
   teaser: '/images/press/cfilsfil-sdwan-2017.jpg'
+categories:
+  - SRMPLS
+  - SRv6
 ---    
 Clarence Filsfils presented at the SD-WAN Summit 2017 SRv6 for the SD-WAN. His presentation gives an introduction to Segment Routing and highlights the benefits of SRv6 for the SD-WAN. 
        

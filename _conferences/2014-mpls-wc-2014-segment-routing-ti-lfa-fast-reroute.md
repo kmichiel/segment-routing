@@ -10,6 +10,9 @@ excerpt: >-
 header:
   teaser: >-
     http://image.slidesharecdn.com/mplswc2014-segmentroutingtilfa-151216192029/95/mpls-wc-2014-segment-routing-tilfa-fast-reroute-1-638.jpg
+categories:
+  - SRMPLS
+  - SRv6
 ---
 
 # TILFA FRR with SR 

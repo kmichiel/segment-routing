@@ -7,6 +7,9 @@ author: Arkadiy Guiko
 excerpt: 'Arkadiy Guiko: Flexible Algorithms in IGP, a Distributed SR-TE Solution'
 header:
   teaser: 'https://img.youtube.com/vi/meGZ2U2e9TU/mqdefault.jpg'
+categories:
+  - SRMPLS
+  - SRv6
 ---    
        
 <iframe width="355" height="200" src="https://www.youtube.com/embed/meGZ2U2e9TU" frameborder="0" allowfullscreen></iframe>

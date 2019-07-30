@@ -7,6 +7,9 @@ author: Segment Routing Team
 excerpt: 'Segment Routing MPLS and IPv6 at NFDx'
 header:
   teaser: 'https://img.youtube.com/vi/xjSFlo3oE9k/mqdefault.jpg'
+categories:
+  - SRMPLS
+  - SRv6
 ---    
 
 ### Segment Routing and MPLS with Jose Liste

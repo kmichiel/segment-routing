@@ -9,6 +9,9 @@ header:
 excerpt: >-
   CHI-NOG (Chicago Network Operator's Group):  Segment Routing - Traffic
   Engineering
+categories:
+  - SRMPLS
+  - SRv6
 ---
 
 ## Abstract  

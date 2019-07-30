@@ -7,6 +7,9 @@ author: Segment Routing Team
 excerpt: ' SR Tech Field Day: SR strategy and deployment experiences from Walmart, Microsoft and Comcast'
 header:
   teaser: 'https://img.youtube.com/vi/hIb4xESVqyM/mqdefault.jpg'
+categories:
+  - SRMPLS
+  - SRv6
 ---    
        
 ### Segment Routing Field Day Roundtable

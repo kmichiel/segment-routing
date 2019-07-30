@@ -9,6 +9,9 @@ excerpt: >-
   Policy Enforcement
 header:
   teaser: 'https://img.youtube.com/vi/rLUHFfx3i64/mqdefault.jpg'
+categories:
+  - SRMPLS
+  - SRv6
 ---
 
 ## Segment Routing with Contiv for Infrastructure Policy Enforcement

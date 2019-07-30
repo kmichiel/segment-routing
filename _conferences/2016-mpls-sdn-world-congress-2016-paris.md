@@ -9,6 +9,9 @@ excerpt: >-
   Experience and Technology Update
 header:
   teaser: 'https://img.youtube.com/vi/VORGW0bBHLs/mqdefault.jpg'
+categories:
+  - SRMPLS
+  - SRv6
 ---
 
 {% include toc icon="table" title="MPLS/SDN World Congress 2016" %}

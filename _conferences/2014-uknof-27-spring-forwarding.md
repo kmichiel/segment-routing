@@ -7,6 +7,9 @@ title: 'UKNOF 27: Spring Forwarding'
 excerpt: SPRING FORWARD(ING). Evolving IP/MPLS networks with Segment Routing
 header:
   teaser: /images/uknof27-teaser.png
+categories:
+  - SRMPLS
+  - SRv6
 ---
 
 ## Segment Routing Overview  

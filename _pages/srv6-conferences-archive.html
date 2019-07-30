@@ -7,6 +7,8 @@ title: "Conferences and Events"
 <div class="grid__wrapper">
   {% assign sorted = (site.conferences | sort: 'date') %}
   {% for post in sorted reversed %}
-    {% include archive-single.html type="grid" subpage="#SRv6" %}
+    {% if post.categories contains "SRv6" or post.categories contains "srv6" %}
+      {% include archive-single.html type="grid" subpage="#SRv6" %}
+    {% endif %}
   {% endfor %}
 </div>

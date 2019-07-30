@@ -9,6 +9,9 @@ excerpt: >-
   Status
 header:
   teaser: 'https://img.youtube.com/vi/0IVk3WnrROs/mqdefault.jpg'
+categories:
+  - SRMPLS
+  - SRv6
 ---
 {% include toc icon="table" title="MPLS/SDN World Congress 2016" %}
 

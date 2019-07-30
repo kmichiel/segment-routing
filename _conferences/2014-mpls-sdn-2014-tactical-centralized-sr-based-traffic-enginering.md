@@ -9,6 +9,9 @@ excerpt: >-
   Introduction.
 header:
   teaser: 'https://img.youtube.com/vi/8qGVmrArU7o/mqdefault.jpg'
+categories:
+  - SRMPLS
+  - SRv6
 ---
 
 ##  Tactical Centralized SR-based Traffic Enginering

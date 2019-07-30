@@ -8,6 +8,9 @@ header:
 excerpt: >-
   Watch Bertrand Duvivier, Cisco's Principal Engineer, on the genesis and future for Segment Routing
 author: Segment Routing Team
+categories:
+  - SRMPLS
+  - SRv6
 ---
 Watch Bertrand Duvivier, Cisco's Principal Engineer, on the genesis and future for Segment Routing
 

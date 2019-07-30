@@ -7,6 +7,9 @@ author: Segment Routing Team
 excerpt: 'Watch Jakub Horn demonstrate the benefits of Tree-SID.'
 header:
   teaser: 'https://img.youtube.com/vi/8qXdPODSrOM/mqdefault.jpg'
+categories:
+  - SRMPLS
+  - SRv6
 ---    
 Tree-SID is modern controller driven multicast technology based on Segment Routing. In this video Jakub Horn demonstrates it.
        

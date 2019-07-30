@@ -7,6 +7,9 @@ title: 'IETF84: SDN at Google'
 excerpt: Opportunities for WAN Optimization
 header:
   teaser: http://www6.ietf.org/images/ietflogotrans.gif
+categories:
+  - SRMPLS
+  - SRv6
 ---
 
 ## SDN at Google: Opportunities for WAN Optimization

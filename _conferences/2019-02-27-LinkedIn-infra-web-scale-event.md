@@ -7,6 +7,9 @@ author: Segment Routing Team
 excerpt: 'Clarence Filsfils presents Segment Routing technology at the LinkedIn /Infra/Web Scale Event'
 header:
   teaser: '/images/20190227-linkedin-infra-scale-web-event.jpg'
+categories:
+  - SRMPLS
+  - SRv6
 ---
 
 ## LinkedIn /Infra/Web Scale Event

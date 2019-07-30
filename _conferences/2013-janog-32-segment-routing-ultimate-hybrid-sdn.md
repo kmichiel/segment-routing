@@ -7,6 +7,9 @@ title: Janog 32 "Segment Routing - Ultimate Hybrid SDN"
 excerpt: Janog (Japan Network Operators' Group) 32 - 4 July 2013
 header:
   teaser: /images/janog32.png
+categories:
+  - SRMPLS
+  - SRv6
 ---
 
 ## Segment Routing - Ultimate Hybrid SDN"

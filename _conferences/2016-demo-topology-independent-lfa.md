@@ -7,6 +7,9 @@ header:
   teaser: 'https://img.youtube.com/vi/dttw2nc5FrA/mqdefault.jpg'
 excerpt: >-
   Watch Kris Michielsen's demonstration of TI-LFA. TI-LFA provides automated sub-50msec FRR in any topology, along the optimum backup path, against link, node or SRLG failure.
+categories:
+  - SRMPLS
+  - SRv6
 ---
 Watch Kris Michielsen's demonstration of TI-LFA. TI-LFA provides automated sub-50msec FRR in any topology, along the optimum backup path, against link, node or SRLG failure.
 

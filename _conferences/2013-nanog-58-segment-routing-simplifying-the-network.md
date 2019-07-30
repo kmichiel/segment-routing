@@ -9,6 +9,9 @@ excerpt: >-
   LA.
 header:
   teaser: 'https://img.youtube.com/vi/371DUGHjPwk/mqdefault.jpg'
+categories:
+  - SRMPLS
+  - SRv6
 ---
 
 ## Segment Routing - Simplifying the Network

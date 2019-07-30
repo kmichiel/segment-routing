@@ -7,6 +7,9 @@ title: 'Interview at MPLS WC 2013 '
 excerpt: 'MPLS Ethernet World Congress, 2013'
 header:
   teaser: 'https://img.youtube.com/vi/iHqISXXqexg/mqdefault.jpg'
+categories:
+  - SRMPLS
+  - SRv6
 ---
 ## Interview with Clarence Filsfils at MPLS WC 2013
 

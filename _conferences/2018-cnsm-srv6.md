@@ -7,6 +7,9 @@ author: Clarence Filsfils
 excerpt: 'Clarence Filsfils: SRv6 solution, use-cases, deployments and research opportunities'
 header:
   teaser: '/images/20181106-cnsm-srv6.png'
+categories:
+  - SRMPLS
+  - SRv6
 ---    
 
 {% capture "pdf-link" %}/images/20181106-cnsm-srv6.pdf{% endcapture %}

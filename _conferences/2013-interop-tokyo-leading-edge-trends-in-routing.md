@@ -7,6 +7,9 @@ title: InterOp Tokyo "Leading-edge Trends in Routing"
 excerpt: 'InterOp Tokyo: 12-14 JUNE,2013 MAKUHARIMESSE'
 header:
   teaser: /images/interop_tokyo_2013.png
+categories:
+  - SRMPLS
+  - SRv6
 ---
 ## Leading-edge Trends in Routing
 

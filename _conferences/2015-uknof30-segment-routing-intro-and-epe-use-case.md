@@ -7,6 +7,9 @@ title: 'UKNOF30: Segment Routing intro and EPE use-case'
 excerpt: 'UK Network Operators'' Forum, 30th Edition, London.'
 header:
   teaser: 'https://img.youtube.com/vi/K0Lz7_3I2ZA/mqdefault.jpg'
+categories:
+  - SRMPLS
+  - SRv6
 ---
 
 **For more information on the UK network operator's forum, head over to <https://www.uknof.org.uk/>.  

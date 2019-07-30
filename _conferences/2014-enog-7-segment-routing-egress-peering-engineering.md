@@ -7,6 +7,9 @@ title: 'ENOG 7: Segment Routing - Egress Peering Engineering'
 excerpt: ENOG 7 / RIPE NCC Regional Meeting took place in Moscow from 26-27 May 2014.
 header:
   teaser: 'https://img.youtube.com/vi/lujkWfdB4NM/mqdefault.jpg'
+categories:
+  - SRMPLS
+  - SRv6
 ---
 
 **Daniel Ginsburg, Yandex (EN)**

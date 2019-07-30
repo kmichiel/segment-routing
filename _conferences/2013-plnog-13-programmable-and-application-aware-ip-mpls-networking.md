@@ -9,6 +9,9 @@ tags:
   - segment-routing
 header:
   teaser: 'https://img.youtube.com/vi/2jjgrq805VU/mqdefault.jpg'
+categories:
+  - SRMPLS
+  - SRv6
 ---
 
 {% capture "info-text" %}

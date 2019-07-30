@@ -8,6 +8,9 @@ excerpt: 'RIPE 66: Segment Routing Technology and Use Cases'
 header:
   teaser: >-
     https://ripe66.ripe.net/wp-content/uploads/2013/04/RIPE-66-Guide-to-Dublin_thumbnail.png
+categories:
+  - SRMPLS
+  - SRv6
 ---
 
 ## Segment Routing - Technology and Use Cases

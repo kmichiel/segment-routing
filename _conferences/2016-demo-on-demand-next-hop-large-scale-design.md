@@ -7,6 +7,9 @@ header:
   teaser: 'https://img.youtube.com/vi/0xtysG86Fik/mqdefault.jpg'
 excerpt: >-
   Watch Jose Liste's demonstration of SR ODN. Learn how SR enables end-to-end SLA from datacenter to metro to backbone at scale.
+categories:
+  - SRMPLS
+  - SRv6
 ---
 Watch Jose Liste's demonstration of SR ODN. Learn how SR enables end-to-end SLA from datacenter to metro to backbone at scale.
 

@@ -8,6 +8,9 @@ header:
   teaser: >-
 excerpt: 'Apricot 2014, Petaling Jaya, Malaysia 18-28 February 2014'
 position: hidden
+categories:
+  - SRMPLS
+  - SRv6
 ---
 
 ## Segment Routing Overview  

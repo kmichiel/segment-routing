@@ -7,6 +7,9 @@ header:
   teaser: 'https://img.youtube.com/vi/Ndb3RCIlix8/mqdefault.jpg'
 excerpt: >-
   Watch Colin Kincaid, Cisco's SP CTO, views on how virtualization is transforming Service Providers and the role played by IPv6 and Segment Routing as the de-facto next-gen architecture.
+categories:
+  - SRMPLS
+  - SRv6
 ---
 Watch Colin Kincaid, Cisco's SP CTO, views on how virtualization is transforming Service Providers and the role played by IPv6 and Segment Routing as the de-facto next-gen architecture.
 

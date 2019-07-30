@@ -7,6 +7,9 @@ title: 'SDN Japan 2013: Segment Routing'
 excerpt: 'SDN Japan 2013: September 18-20, 2013, Ebisu Garden Hall. '
 header:
   teaser: 'https://img.youtube.com/vi/FiK58HURdHo/mqdefault.jpg'
+categories:
+  - SRMPLS
+  - SRv6
 ---
 ## Segment Routing - Path/Flow Programmability  
 
