@@ -11,7 +11,9 @@
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
 
     {% include browser-upgrade.html %}
-    {% include masthead-splash.html nav="splash" %}
+    {%comment %}
+    	{% include masthead-splash.html nav="splash" %}
+    {% endcomment %}
 
     <style>
 	    .flex-container-row {
@@ -27,16 +29,17 @@
 	    .flex-container-row .wrapper {
 		    flex: 0 0 50%;
 	    }
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
     </style>
     <div class="page__hero--overlay flex-container-column" style="background-image: url('{{ "/images/home/hero.jpg" | relative_url }}');">
-      <div class="wrapper" style="text-align:center;">
-        <h1 class="page__title" itemprop="headline" style="">
-            Segment Routing 
+      <div class="wrapper" style="text-align:center;padding-bottom: 2em;">
+        <h1 class="page__title" itemprop="headline" style="font-family: 'Nunito', sans-serif;font-size: 3em;">
+            SEGMENT ROUTING
         </h1>
       </div>
       <div class="wrapper flex-container-row">
           <div class="wrapper" style="text-align:center;">
-            <h1 class="page__title" itemprop="headline" style="">
+            <h1 class="page__title" itemprop="headline" style="font-family: 'Nunito', sans-serif;font-size: 2em;">
 		    <a href="{{ '/SRv6/' | relative_url }}">SRv6</a>
             </h1>
     	{% if page.excerpt %}<p class="page__lead" style="text-align:center;">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>{% endif %}
@@ -47,7 +50,7 @@
               </p>
           </div>
           <div class="wrapper" style="text-align:center;">
-            <h1 class="page__title" itemprop="headline" style="">
+            <h1 class="page__title" itemprop="headline" style="font-family: 'Nunito', sans-serif;font-size: 2em;">
 		    <a href="{{ '/SRMPLS/' | relative_url }}">SR MPLS</a>
             </h1>
     	{% if page.excerpt %}<p class="page__lead" style="text-align:center;">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>{% endif %}

@@ -1,5 +1,5 @@
 ---
-title: SoftBank Started operation of "SRv6 (segment routing IPv6)" in mobile IP network
+title: SoftBank Started operation of SRv6 in mobile IP network
 author: Softbank Corporation
 source: Softbank Corporation News
 source-url: https://www.softbank.jp/corp/news/press/sbkk/2019/20190424_03/
@@ -11,4 +11,6 @@ excerpt: >-
   <a href="https://translate.google.com/translate?hl=&sl=auto&tl=en&u=https%3A%2F%2Fwww.softbank.jp%2Fcorp%2Fnews%2Fpress%2Fsbkk%2F2019%2F20190424_03%2F">Click here for an English translation.</a>
   
 teaser: https://www.softbank.jp/site/set/common/p/img/logo-group-rf2017-ph1.png
+categories:
+  - SRv6
 ---

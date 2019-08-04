@@ -1,5 +1,5 @@
 ---
-title: "Segment Routing NEW HOMEPAGE"
+title: "Segment Routing"
 layout: new-splash
 permalink: /
 date: null

@@ -1,108 +1,210 @@
 {% assign news_items = (site.news | sort: post.date | reverse) %}
+
 {% comment %}
 news item contains:
 title : title
+title-short : shorter title for news slider
 author : author
 source : where the news came from
 source-url : 
 eurl : title link
 excerpt : text description
-teaser : image
+excerpt-short : shorter excerpt for news slider
+teaser : url of image
 {% endcomment %}
 
+{% assign title-max-length = 50 %}
+{% assign excerpt-max-length = 15 %}
+
 <style>
-.km__container {
-	/*height: 200px; */
+#news-slider {
+	// height: 200px;
 	width: 100%;
 	display: flex;
 	flex-wrap: nowrap;
 	overflow-x: auto;
-/*
-	-webkit-overflow-scrolling: touch;
-        -ms-overflow-style: -ms-autohiding-scrollbar;
-*/
+//	-webkit-overflow-scrolling: touch;
+//        -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
-/*
-.km__container::-webkit-scrollbar {
-  display: none; }
-*/
-
-.km__item {
+#news-slider .news-slider-news-item {
 	flex: 0 0 auto;
-	margin: 0;
-	margin-right: 3px;
-	background: rgba(100,100,100,0.1);
+	width: 30%;
+}
+
+#news-slider .news-slider-news-card {
+	padding: 0 21px 21px 0;
+}
+
+#news-slider img {
+	width: 100%;
+	object-fit: scale-down; /* was: cover */
+	height: 200px;
+}
+
+#news-slider .news-slider-channelName{
+	color: white;
+	line-height: normal;
+	font-size: 0.8em;
+	font-weight: normal;
+	osition: relative;
+	width: 100%;
+	z-index: 1;
 	position: relative;
-	text-align: center;
-	max-width: 30%;
-	border-radius: 10px;
+	background-color: #049FD9; /* was: #017cad */
+	padding: 8px 30px;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+	position: relative;
+	box-sizing: border-box;
+	transition: background-color 0.25s;
 }
 
-.km__item .archive__item-teaser img {
-    max-height: 110px;
-    width: auto;
+#news-slider .news-slider-channelName:hover {
+	background-color: #014769;
 }
 
-.archive__item-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#news-slider .news-slider-channelName a {
+	position: relative;
+	display: block;
 }
 
-.archive__item-excerpt {
-    width: 80%;
+#news-slider .news-slider-channelName a:hover span {
+	text-decoration: none;
 }
 
-.archive__item-excerpt p {
-    text-align: center;
+#news-slider .news-slider-card-content{
+	overflow: hidden;
+	border: 1px solid #ddd;
+	border-radius: 30px 30px 0 0;
+	transition: box-shadow 0.25s;
+}
+
+#news-slider .news-slider-card-content:hover {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#news-slider .news-slider-card-content a {
+	text-decoration: none;
+	color: inherit;
+}
+
+#news-slider .news-slider-bottom{
+	padding: 10px 15px;
+	height: 185px;
+	border-top: 1px solid #ddd;
+}
+
+#news-slider .news-slider-top{
+	line-height: 0px;
+	background: #fff; /* was: #000 */
+	position: relative;
+}
+
+#news-slider .news-slider-title{
+	color: #014769;
+	font-weight: bold;
+	padding-bottom: 4px;
+	font-size: 1em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	line-height: 1.25em;
+	position: relative;
+}
+
+#news-slider .news-slider-date{
+	font-weight: bold;
+	padding-bottom: 10px;
+	font-size: 0.8em;
+	line-height: 1.25em;
+}
+
+#news-slider .news-slider-description{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	line-height: 23px;
+	max-height: 90px;
+	font-size: 14px;
+	position: relative;
 }
 
 </style>
 
-<div class="feature__wrapper km__container">
+<div id="news-slider" class="news-slider-container">
 
-  {% for f in news_items %}
+  {% for item in news_items %}
 
-    {% if f.eurl contains "://" %}
-      {% capture f_url %}{{ f.eurl }}{% endcapture %}
+  {% comment %}
+  title and link should be based on categories:
+       SRv6 or SRv6 + SRMPLA -> SRv6
+       SRMPLS -> SR-MPLS
+       no category -> SR-MPLS
+  {% endcomment %}
+  {% if item.categories contains "SRv6" %}
+    {% assign channel-name = "SRv6" %}
+    {% assign channel-url = "/SRv6/news/" | relative_url %}
+  {% else %}
+    {% assign channel-name = "SR MPLS" %}
+    {% assign channel-url = "/news/" | relative_url %}
+  {% endif %}
+
+{% comment %}
+Not used here, the slider item links to the news item via anchor
+    {% if item.eurl contains "://" %}
+      {% capture item_url %}{{ item.eurl }}{% endcapture %}
     {% else %}
-      {% capture f_url %}{{ f.eurl | relative_url }}{% endcapture %}
+      {% capture item_url %}{{ item.eurl | relative_url }}{% endcapture %}
     {% endif %}
+{% endcomment %}
 
-<!--    <div class="feature__item{% if include.type %}--{{ include.type }}{% endif %}">-->
-      <div class="archive__item km__item">
-        {% if f.teaser %}
-          <div class="archive__item-teaser">
-            <img src=
-              {% if f.teaser contains "://" %}
-                "{{ f.teaser }}"
-              {% else %}
-                "{{ f.teaser | relative_url }}"
-              {% endif %}
-            alt="{% if f.alt %}{{ f.alt }}{% endif %}" {% if f.image_width %} style="width:{{f.image_width}};"{% endif %}>
-          </div>
-        {% endif %}
-
-        <div class="archive__item-body">
-          {% if f.title %}
-            <h2 class="archive__item-title">{{ f.title }}</h2>
-          {% endif %}
-
-          {% if f.excerpt %}
-<!--
-            <div class="archive__item-excerpt">
-              {{ f.excerpt | markdownify }}
+      <div class="news-slider-news-item">
+        <div class="news-slider-news-card">
+          <div class="news-slider-card-content">
+            <div class="news-slider-channelName">
+              <a href=" {{ channel-url }} " title="More {{ channel-name }} news">
+                <span>{{ channel-name }} news</span>
+              </a>
             </div>
--->
-          {% endif %}
-
-          {% if f.eurl %}
-            <p><a href="{{ f_url }}" class="btn {{ f.btn_class }}">{{ f.btn_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
-          {% endif %}
+            {% comment %} add anchor to article {% endcomment %}
+            {% capture item-url %}{{ channel-url }}#{{ item.url | split: '/' | last }}{% endcapture %}
+            <a href="{{ item-url | relative_url }}" title="{{ item.title }}">
+              <div class="news-slider-top">
+                <img src=
+                  {% if item.teaser contains "://" %}
+                    "{{ item.teaser }}"
+                  {% else %}
+                    "{{ item.teaser | relative_url }}"
+                  {% endif %}
+                    alt="{% if item.alt %}{{ item.alt }}{% endif %}" {% if item.image_width %} style="width:{{item.image_width}};"{% endif %}>
+              </div>
+              <div class="news-slider-bottom">
+                <div class="news-slider-content">
+                  <div class="news-slider-title">
+                    <span>
+                      {% if item.title-short %}
+                        {{ item.title-short }}
+                      {% else %}
+                        {{ item.title | truncate: title-max-length }}
+                      {% endif %}
+                    </span>
+                  </div>
+                  <div class="news-slider-date">{{ item.date | date: "%B %e, %Y" }}
+                  </div>
+                  <div class="news-slider-description">
+                    <span>
+                      {% if item.excerpt-short %}
+                        {{ item.excerpt-short | truncatewords: excerpt-max-length | markdownify }}
+<!-- {{ item.excerpt | markdownify | strip_html | truncate: excerpt-max-length }} -->
+                      {% else %}
+                        {{ item.excerpt | truncatewords: excerpt-max-length | markdownify }}
+                      {% endif %}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
-<!--    </div>-->
   {% endfor %}
 
 </div>

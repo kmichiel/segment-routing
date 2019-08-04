@@ -1,0 +1,69 @@
+---
+layout: default
+---
+
+<!-- ipage url: {{ page.url }} -->
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
+{% endif %}
+
+{% if page.id %}
+  {% assign title = page.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = page.title %}
+{% endif %}
+
+{% comment %}
+don't do breadcrumbs ...
+{% if page.url != "/" and site.breadcrumbs == "true" %}
+    {% include breadcrumbs.html %}
+{% elsif page.url != "/" and page.breadnav %}
+    {% include breadcrumbs.html %}
+{% endif %}
+{% endcomment %}
+
+<div id="main" role="main">
+<div class="bloglist__item">
+  <article class="splash" itemscope itemtype="http://schema.org/CreativeWork">
+    {% if page.teaser %}
+      <div class="bloglist__item-teaser">
+            <img src=
+              {% if page.teaser contains "://" %}
+                "{{ page.teaser }}"
+              {% else %}
+                "{{ page.teaser | relative_url }}"
+              {% endif %}
+              alt="">
+      </div>
+    {% endif %}
+    <div class="bloglist__item-body">
+      <h3 class="bloglist__item-title" itemprop="headline">
+        {% if page.eurl %}
+          <a href="{{ page.eurl }}" rel="external">{{ title }}</a>
+        {% else %}
+          {{ title }}
+        {% endif %}
+      </h3>
+      {% if page.author or page.date or page.excerpt %}
+        <p class="bloglist__item-excerpt">
+          {% if page.excerpt %}{{ page.excerpt }}{% endif %}<br />
+          <em>
+            {% if page.author %}
+              {{ page.author }}{% if page.source %},{% endif %}
+            {% endif %}
+            {% if page.source %}
+              {% if page.source-url %}
+                <a href="{{ page.source-url }}" rel="external">{{ page.source }}</a>
+              {% else %}
+                {{ page.source }}
+              {% endif %}
+            {% endif %}
+            &mdash;
+            {% if page.date %}{{ page.date | date: '%B %d, %Y' }}{% endif %}
+          </em>
+        </p>
+      {% endif %}
+      </div>
+  </article>
+</div>
+</div>
