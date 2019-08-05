@@ -14,7 +14,7 @@ teaser : url of image
 {% endcomment %}
 
 {% assign title-max-length = 50 %}
-{% assign excerpt-max-length = 15 %}
+{% assign excerpt-max-length = 13 %}
 
 <style>
 #news-slider {
@@ -23,13 +23,14 @@ teaser : url of image
 	display: flex;
 	flex-wrap: nowrap;
 	overflow-x: auto;
+        margin-bottom: 1em;
 //	-webkit-overflow-scrolling: touch;
 //        -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 #news-slider .news-slider-news-item {
 	flex: 0 0 auto;
-	width: 30%;
+	width: 90%;
 }
 
 #news-slider .news-slider-news-card {
@@ -100,14 +101,16 @@ teaser : url of image
 	position: relative;
 }
 
-#news-slider .news-slider-title{
+#news-slider .news-slider-title h2 {
 	color: #014769;
-	font-weight: bold;
+	/* font-weight: bold;
 	padding-bottom: 4px;
-	font-size: 1em;
+	line-height: 1.25em;
+	font-size: 1em; */
+        margin: 0;
+        padding: 0;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	line-height: 1.25em;
 	position: relative;
 }
 
@@ -121,17 +124,29 @@ teaser : url of image
 #news-slider .news-slider-description{
 	overflow: hidden;
 	text-overflow: ellipsis;
-	line-height: 23px;
+	/* line-height: 23px; */
 	max-height: 90px;
-	font-size: 14px;
+	/* font-size: 14px; */
 	position: relative;
 }
 
+
+@media (min-width: 425px) {
+#news-slider .news-slider-news-item {
+        width: 48%;
+}
+}
+
+@media (min-width: 659px) {
+#news-slider .news-slider-news-item {
+        width: 30%;
+}
+}
 </style>
 
 <div id="news-slider" class="news-slider-container">
 
-  {% for item in news_items %}
+  {% for item in news_items limit: 10 %}
 
   {% comment %}
   title and link should be based on categories:
@@ -179,13 +194,13 @@ Not used here, the slider item links to the news item via anchor
               <div class="news-slider-bottom">
                 <div class="news-slider-content">
                   <div class="news-slider-title">
-                    <span>
+                    <h2>
                       {% if item.title-short %}
                         {{ item.title-short }}
                       {% else %}
                         {{ item.title | truncate: title-max-length }}
                       {% endif %}
-                    </span>
+                    </h2>
                   </div>
                   <div class="news-slider-date">{{ item.date | date: "%B %e, %Y" }}
                   </div>
