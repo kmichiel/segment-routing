@@ -181,7 +181,7 @@ Not used here, the slider item links to the news item via anchor
             </div>
             {% comment %} add anchor to article {% endcomment %}
             {% capture item-url %}{{ channel-url }}#{{ item.url | split: '/' | last }}{% endcapture %}
-            <a href="{{ item-url | relative_url }}" title="{{ item.title }}">
+            <a href="{{ item-url }}" title="{{ item.title }}">
               <div class="news-slider-top">
                 <img src=
                   {% if item.teaser contains "://" %}
