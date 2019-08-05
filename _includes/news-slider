@@ -48,13 +48,12 @@ teaser : url of image
 	line-height: normal;
 	font-size: 0.8em;
 	font-weight: normal;
-	osition: relative;
 	width: 100%;
 	z-index: 1;
 	position: relative;
 	background-color: #049FD9; /* was: #017cad */
 	padding: 8px 30px;
-	box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+	/*box-shadow: 0 4px 10px rgba(0,0,0,0.2);*/
 	position: relative;
 	box-sizing: border-box;
 	transition: background-color 0.25s;
@@ -87,6 +86,10 @@ teaser : url of image
 #news-slider .news-slider-card-content a {
 	text-decoration: none;
 	color: inherit;
+}
+
+#news-slider .news-slider-card-content a:hover img {
+	box-shadow: initial;
 }
 
 #news-slider .news-slider-bottom{
