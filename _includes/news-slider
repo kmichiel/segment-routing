@@ -75,7 +75,7 @@ teaser : url of image
 #news-slider .news-slider-card-content{
 	overflow: hidden;
 	border: 1px solid #ddd;
-	border-radius: 30px 30px 0 0;
+	border-radius: 10px 10px 0 0;
 	transition: box-shadow 0.25s;
 }
 
@@ -105,8 +105,8 @@ teaser : url of image
 }
 
 #news-slider .news-slider-title h2 {
-	color: #014769;
-	/* font-weight: bold;
+	/* color: #014769;
+	font-weight: bold;
 	padding-bottom: 4px;
 	line-height: 1.25em;
 	font-size: 1em; */
@@ -118,9 +118,9 @@ teaser : url of image
 }
 
 #news-slider .news-slider-date{
-	font-weight: bold;
+	/* font-weight: bold;*/
 	padding-bottom: 10px;
-	font-size: 0.8em;
+	font-size: 0.6em;
 	line-height: 1.25em;
 }
 
