@@ -29,6 +29,33 @@
 	    .flex-container-row .wrapper {
 		    flex: 0 0 50%;
 	    }
+
+            h1.page__title a {
+              position: relative;
+            }
+            
+            h1.page__title a.underline-effect:after {
+              content: '';
+              position: absolute;
+              left: 0;
+              display: inline-block;
+              height: 1em;
+              width: 100%;
+              border-bottom: 3px solid;
+              margin-top: 10px;
+              opacity: 0;
+              -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+              transition: opacity 0.35s, transform 0.35s;
+              -webkit-transform: scale(0,1);
+              transform: scale(0,1);
+            }
+            
+            h1.page__title a.underline-effect:hover:after {
+              opacity: 1;
+              -webkit-transform: scale(1);
+              transform: scale(1);
+            }
+
             @media (min-width: 37.5em) {
                 .flex-container-row {
             	    flex-direction: row;
@@ -44,7 +71,7 @@
       <div class="wrapper flex-container-row">
           <div class="wrapper" style="text-align:center;">
             <h1 class="page__title" itemprop="headline" style="font-size: 2em;">
-		    <a href="{{ '/SRv6/' | relative_url }}">SRv6</a>
+		    <a href="{{ '/SRv6/' | relative_url }}" class="underline-effect">SRv6</a>
             </h1>
     	{% if page.excerpt-SRv6 %}<p class="page__lead" style="text-align:center;">{{ page.excerpt-SRv6 | markdownify | remove: "<p>" | remove: "</p>" }}</p>{% endif %}
               <p>
@@ -55,7 +82,7 @@
           </div>
           <div class="wrapper" style="text-align:center;">
             <h1 class="page__title" itemprop="headline" style="font-size: 2em;">
-		    <a href="{{ '/SRMPLS/' | relative_url }}">SR MPLS</a>
+		    <a href="{{ '/SRMPLS/' | relative_url }}" class="underline-effect">SR MPLS</a>
             </h1>
     	{% if page.excerpt-SRMPLS %}<p class="page__lead" style="text-align:center;">{{ page.excerpt-SRMPLS | markdownify | remove: "<p>" | remove: "</p>" }}</p>{% endif %}
               <p>
