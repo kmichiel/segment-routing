@@ -10,9 +10,9 @@ excerpt: |
       The application steers its packets through an ordered list of instructions and realizes end-to-end policy without creating any per-flow state in the network.
 
 excerpt-SRv6: |
-      SRv6 implementats SR on the IPv6 data plane. It uses the SR extension Header (SRH) to carry the instrucions in the packet header.
+      Unleash the power of the entirely new “Network Programming” paradigm
 excerpt-SRMPLS: |
-      SR MPLS implements SR on the MPLS data plane. It uses the existing MPLS architecture to carry the instructions in the packet header.
+      Simplify and empower your network with SR using the existing MPLS architecture
 
 feature_row_benefits:
   - title: Simple
