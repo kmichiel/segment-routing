@@ -6,6 +6,8 @@ title: 'Tree-SID'
 author: 'Jakub Horn, Cisco'
 excerpt: 'Watch Jakub Horn demonstrate the benefits of Tree-SID.'
 teaser: 'https://img.youtube.com/vi/8qXdPODSrOM/mqdefault.jpg'
+categories:
+  - SRMPLS
 ---    
 Tree-SID is modern controller driven multicast technology based on Segment Routing. In this video Jakub Horn demonstrates it.
        

@@ -8,5 +8,12 @@ title: "It's demo time!"
 
 {% assign sorted = (site.demos | sort: post.date | reverse) %}
 {% for post in sorted %}
-  {% include demos-list %}
+  {% if post.categories.size > 0 %}
+    {% assign noCategories = false %}
+  {% else %}
+    {% assign noCategories = true %}
+  {% endif %}
+  {% if noCategories or post.categories contains "SRMPLS" or post.categories contains "srmpls" %}
+    {% include demos-list %}
+  {% endif %}
 {% endfor %}

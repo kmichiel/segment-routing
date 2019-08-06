@@ -6,6 +6,8 @@ title: 'SD-WAN over SR Demonstration'
 author: 'Jose Liste, Cisco'
 excerpt: 'Watch Jose Liste demonstrate Software-Defined-WAN (SD-WAN) over Segment Routing.'
 teaser: 'https://img.youtube.com/vi/jYMrEuQp4fk/mqdefault.jpg'
+categories:
+  - SRMPLS
 ---    
 Jose Liste demonstrates Software-Defined WAN (SD-WAN) over SR. SD-WAN and SR enables a service provider to offer underlay transport SLAs for SD-WAN customers. Customers mark the packets with their desired QoS and transport treatment. SP leverages SR per-flow On-Demand Nexthop (ODN) and Automated Steering (AS) to provide the underlay transport SLAs according to the customer's marking.
        

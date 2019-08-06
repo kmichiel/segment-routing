@@ -8,5 +8,12 @@ title: "It's demo time!"
 <h1>SRv6</h1>
 {% assign sorted = (site.demos | sort: post.date | reverse) %}
 {% for post in sorted %}
-  {% include demos-list subpage="#SRv6" %}
+  {% if post.categories.size > 0 %}
+    {% assign noCategories = false %}
+  {% else %}
+    {% assign noCategories = true %}
+  {% endif %}
+  {% if noCategories or post.categories contains "SRv6" or post.categories contains "srv6" %}
+    {% include demos-list subpage="#SRv6" %}
+  {% endif %}
 {% endfor %}
