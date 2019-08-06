@@ -39,13 +39,14 @@
         <h1 class="page__title" itemprop="headline" style="font-size: 3em;">
             SEGMENT ROUTING
         </h1>
+	{% if page.excerpt %}<p class="page__lead" style="text-align:center;color:white;">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>{% endif %}
       </div>
       <div class="wrapper flex-container-row">
           <div class="wrapper" style="text-align:center;">
             <h1 class="page__title" itemprop="headline" style="font-size: 2em;">
 		    <a href="{{ '/SRv6/' | relative_url }}">SRv6</a>
             </h1>
-    	{% if page.excerpt %}<p class="page__lead" style="text-align:center;">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>{% endif %}
+    	{% if page.excerpt-SRv6 %}<p class="page__lead" style="text-align:center;">{{ page.excerpt-SRv6 | markdownify | remove: "<p>" | remove: "</p>" }}</p>{% endif %}
               <p>
                 <a href="/tutorials/" class="btn btn--large"><i class='fa fa-step-forward'></i> Get Started!</a> 
                 <a href="https://www.youtube.com/watch?v=_T8d29RhJsQ" class="btn btn--large" data-lity><i class='fa fa-play-circle-o'></i> SRv6 video</a>
@@ -56,7 +57,7 @@
             <h1 class="page__title" itemprop="headline" style="font-size: 2em;">
 		    <a href="{{ '/SRMPLS/' | relative_url }}">SR MPLS</a>
             </h1>
-    	{% if page.excerpt %}<p class="page__lead" style="text-align:center;">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>{% endif %}
+    	{% if page.excerpt-SRMPLS %}<p class="page__lead" style="text-align:center;">{{ page.excerpt-SRMPLS | markdownify | remove: "<p>" | remove: "</p>" }}</p>{% endif %}
               <p>
                 <a href="/tutorials/" class="btn btn--large"><i class='fa fa-step-forward'></i> Get Started!</a> 
                 <a href="https://www.youtube.com/watch?v=_T8d29RhJsQ" class="btn btn--large" data-lity><i class='fa fa-play-circle-o'></i> SRv6 video</a>
