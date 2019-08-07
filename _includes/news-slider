@@ -92,10 +92,15 @@ teaser : url of image
 	box-shadow: initial;
 }
 
-#news-slider .news-slider-bottom{
+#news-slider .news-slider-bottom {
 	padding: 10px 15px;
 	height: 185px;
 	border-top: 1px solid #ddd;
+}
+
+#news-slider .news-slider-bottom {
+	/* make font same as .archive__item-excerpt */
+	font-size: 0.90625em;
 }
 
 #news-slider .news-slider-top{
