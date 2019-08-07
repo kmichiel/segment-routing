@@ -1,0 +1,159 @@
+{% comment %}
+
+the required tutorials (tutorial "posts") must be in array myTutorials
+
+if an anchor is needed to keep the SRv6 context when going to a tutorial entry, SRv6 page could use:
+      {% include tutorials.html subpage="#SRv6" %}
+{% endcomment %}
+
+{% assign sorted = (myTutorials | where:"category","concepts" | sort: 'order') %}
+{% if sorted.size > 0 %}
+  <a onclick="show_concepts()" style="cursor: pointer"><h2><i id="icon_concepts" class='fa fa-angle-right'></i> SR concepts</h2></a>
+  <p class="archive__item-excerpt">Learn about the foundational SR concepts.</p>
+  <div id="list_concepts" style="display: none">
+  {% for post in sorted %}
+    {% include archive-single.html subpage=include.subpage %}
+  {% endfor %}
+  </div>
+{% endif %}
+
+{% assign sorted = (myTutorials | where:"category","igp" | sort: 'order') %}
+{% if sorted.size > 0 %}
+  <a onclick="show_igp()" style="cursor: pointer"><h2><i id="icon_igp" class='fa fa-angle-right'></i> SR IGP</h2></a>
+  <p class="archive__item-excerpt">The SR IGP control plane and automated fast-reroute resiliency.</p>
+  <div id="list_igp" style="display: none">
+  {% for post in sorted %}
+    {% include archive-single.html subpage=include.subpage %}
+  {% endfor %}
+  </div>
+{% endif %}
+
+{% assign sorted = (myTutorials | where:"category","ldp" | sort: 'order') %}
+{% if sorted.size > 0 %}
+  <a onclick="show_ldp()" style="cursor: pointer"><h2><i id="icon_ldp" class='fa fa-angle-right'></i> SR and LDP</h2></a>
+  <p class="archive__item-excerpt">Introducing SR in an LDP network, how they can co-exist and interwork.</p>
+  <div id="list_ldp" style="display: none">
+  {% for post in sorted %}
+    {% include archive-single.html subpage=include.subpage %}
+  {% endfor %}
+  </div>
+{% endif %}
+
+{% assign sorted = (myTutorials | where:"category","te" | sort: 'order') %}
+{% if sorted.size > 0 %}
+  <a onclick="show_te()" style="cursor: pointer"><h2><i id="icon_te" class='fa fa-angle-right'></i> SR Traffic Engineering</h2></a>
+  <p class="archive__item-excerpt">SR-TE provides you low-delay paths, disjoint paths,… and many more.</p>
+  <div id="list_te" style="display: none">
+  {% for post in sorted %}
+    {% include archive-single.html subpage=include.subpage %}
+  {% endfor %}
+  </div>
+{% endif %}
+
+{% assign sorted = (myTutorials | where:"category","srv6" | sort: 'order') %}
+{% if sorted.size > 0 %}
+  <a onclick="show_srv6()" style="cursor: pointer"><h2><i id="icon_srv6" class='fa fa-angle-right'></i> SRv6</h2></a>
+  <p class="archive__item-excerpt">Apply the SR concepts to the IPv6 data plane and discover the power of SRv6 network programming.</p>
+  <div id="list_srv6" style="display: none">
+  {% for post in sorted %}
+    {% include archive-single.html subpage=include.subpage %}
+  {% endfor %}
+  </div>
+{% endif %}
+
+{% assign sorted = (myTutorials | where:"category","oam" | sort: 'order') %}
+{% if sorted.size > 0 %}
+  <a onclick="show_oam()" style="cursor: pointer"><h2><i id="icon_oam" class='fa fa-angle-right'></i> SR Operations and Monitoring</h2></a>
+  <p class="archive__item-excerpt">Tools to monitor and operate your SR network.</p>
+  <div id="list_oam" style="display: none">
+  {% for post in sorted %}
+    {% include archive-single.html subpage=include.subpage %}
+  {% endfor %}
+  </div>
+{% endif %}
+
+<script>
+function show_concepts() {
+    var x = document.getElementById("list_concepts");
+    var y = document.getElementById("icon_concepts");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    	y.classList.remove("fa-angle-right");
+    	y.classList.add("fa-angle-down");
+    } else {
+        x.style.display = "none";
+        y.classList.remove("fa-angle-down");
+    	y.classList.add("fa-angle-right");
+    }
+}
+
+function show_igp() {
+    var x = document.getElementById("list_igp");
+    var y = document.getElementById("icon_igp");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    	y.classList.remove("fa-angle-right");
+    	y.classList.add("fa-angle-down");
+    } else {
+        x.style.display = "none";
+        y.classList.remove("fa-angle-down");
+    	y.classList.add("fa-angle-right");
+    }
+}
+
+function show_ldp() {
+    var x = document.getElementById("list_ldp");
+    var y = document.getElementById("icon_ldp");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    	y.classList.remove("fa-angle-right");
+    	y.classList.add("fa-angle-down");
+    } else {
+        x.style.display = "none";
+        y.classList.remove("fa-angle-down");
+    	y.classList.add("fa-angle-right");
+    }
+}
+
+function show_te() {
+    var x = document.getElementById("list_te");
+    var y = document.getElementById("icon_te");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    	y.classList.remove("fa-angle-right");
+    	y.classList.add("fa-angle-down");
+    } else {
+        x.style.display = "none";
+        y.classList.remove("fa-angle-down");
+    	y.classList.add("fa-angle-right");
+    }
+}
+
+function show_srv6() {
+    var x = document.getElementById("list_srv6");
+    var y = document.getElementById("icon_srv6");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    	y.classList.remove("fa-angle-right");
+    	y.classList.add("fa-angle-down");
+    } else {
+        x.style.display = "none";
+        y.classList.remove("fa-angle-down");
+    	y.classList.add("fa-angle-right");
+    }
+}
+
+function show_oam() {
+    var x = document.getElementById("list_oam");
+    var y = document.getElementById("icon_oam");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        y.classList.remove("fa-angle-right");
+        y.classList.add("fa-angle-down");
+    } else {
+        x.style.display = "none";
+        y.classList.remove("fa-angle-down");
+        y.classList.add("fa-angle-right");
+    }
+}
+</script>

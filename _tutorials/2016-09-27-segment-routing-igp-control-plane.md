@@ -10,6 +10,8 @@ excerpt: >-
   Learn how to use IS-IS or OSPF to distribute segments, how to configure
   segment routing and how segment routing works in a multi-area or multi-level
   network. Further, learn how to verify segment routing advertisements.
+categories:
+  - SRMPLS
 ---
 
 Learn how to use IS-IS or OSPF to distribute segments, how to configure segment routing and how segment routing works in a multi-area or multi-level network. Further, learn how to verify segment routing advertisements.

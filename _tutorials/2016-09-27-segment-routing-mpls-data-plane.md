@@ -9,6 +9,8 @@ title: Segment Routing MPLS data plane
 excerpt: >-
   See how segment routing leverages the existing MPLS data plane and learn how
   to verify segment routing MPLS forwarding.
+categories:
+  - SRMPLS
 ---
 
 See how segment routing leverages the existing MPLS data plane and learn how to verify segment routing MPLS forwarding.

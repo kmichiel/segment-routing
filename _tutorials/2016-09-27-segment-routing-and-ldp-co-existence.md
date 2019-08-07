@@ -10,6 +10,8 @@ excerpt: >-
   See how segment routing can co-exist with LDP and other MPLS protocols, both
   on the control plane and on the data plane. Further learn how to affect a
   simple migration from LDP to segment routing.
+categories:
+  - SRMPLS
 ---
 
 See how segment routing can co-exist with LDP and other MPLS protocols, both on the control plane and on the data plane. Further learn how to affect a simple migration from LDP to segment routing.

@@ -10,6 +10,8 @@ excerpt: >-
   See what the Segment Routing Global Block is. Learn about the best practices
   to use the same SRGB on all segment routing nodes. Further, learn how to
   modify the Segment Routing Global Block.
+categories:
+  - SRMPLS
 ---
 
 See what the Segment Routing Global Block is. Learn about the best practices to use the same SRGB on all segment routing nodes. Further, learn how to modify the Segment Routing Global Block.

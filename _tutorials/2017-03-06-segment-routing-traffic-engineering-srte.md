@@ -11,6 +11,8 @@ excerpt: >-
   See how SR-TE provides a simple, automated, and scalable architecture to
   engineer traffic flows in a network. Further, see how the IOS XR based SR Path Computation Element (SR PCE) fits into this
   architecture.
+categories:
+  - SRMPLS
 ---
 An introduction to the Segment Routing Traffic Engineering (SR-TE) technology. See how SR-TE provides a simple, automated, and scalable architecture to engineer traffic flows in a network. Further, see how the IOS XR based SR Path Computation Element (SR PCE) fits into this architecture. SR PCE provides scalable multi-domain SR-optimized path computation capabilities, including multi-domain path disjointness.
 SR-TE provides lots of functionality. It was designed with lead operators, along their use-cases.

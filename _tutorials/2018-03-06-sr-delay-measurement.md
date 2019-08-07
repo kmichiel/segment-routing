@@ -8,6 +8,8 @@ category: oam
 title: Delay Measurement
 excerpt: >-
   The Delay Measurement solution, as part of the Performance Monitoring functionality, provides the dynamic measurement of link delays, which can then be distributed in IGP, BGP-LS and/or telemetry, to be used in SRTE path computation.
+categories:
+  - SRMPLS
 ---
 The Delay Measurement solution, as part of the Performance Monitoring functionality, provides the dynamic measurement of link delays, which can then be distributed in IGP, BGP-LS and/or telemetry, to be used in SRTE path computation. [Click here to see the video of this presentation.](http://www.segment-routing.net/conferences/2018-sr-mpls-performance-monitoring/)
 {: .notice}  

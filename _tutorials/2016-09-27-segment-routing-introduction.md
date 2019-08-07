@@ -7,6 +7,9 @@ order: 1
 category: concepts
 title: Segment Routing Introduction
 excerpt: An introduction to Segment Routing and its concepts.
+categories:
+  - SRMPLS
+  - SRv6
 ---
 
 An introduction to Segment Routing and its concepts.

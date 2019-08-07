@@ -9,6 +9,8 @@ title: Segment Routing Mapping server
 excerpt: >-
   Learn about the objective of the Mapping Server and see how one may configure
   it. Further, verify the mapping server functionality.
+categories:
+  - SRMPLS
 ---
   
 Learn about the objective of the Mapping Server and see how one may configure it. Further, verify the mapping server functionality.

@@ -12,6 +12,8 @@ excerpt: >-
   sub-50ms per-prefix protection to the network. Further, see how TI-LFA
   protects Segment Routing, LDP and eventually IP traffic. In the end, learn how
   to verify TI-LFA using some examples.
+categories:
+  - SRMPLS
 ---
 
 An introduction to the Topology Independent LFA technology. See how Topology Independent LFA provides a simple, automatic, optimal and topology independent sub-50ms per-prefix protection to the network. Further, see how TI-LFA protects Segment Routing, LDP and eventually IP traffic.
