@@ -70,7 +70,7 @@ srmpls:
 # navigation on SRv6 pages
 srv6:
 
-  - title: "SR-MPLS"
+  - title: "SR MPLS"
     url: "/SRMPLS/"
 
   - title: "News"
