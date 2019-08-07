@@ -5,6 +5,19 @@
     {% assign navigation = site.data.navigation['srmpls'] %}
 {% endif %}
 
+<style>
+	li.masthead__menu-item.masthead__menu-item--lg {
+		padding-right: initial;
+	}
+	li.masthead__menu-item:nth-child(3) {
+		padding-right: 1em;
+	}
+	li.masthead__menu-item:nth-child(4) {
+		border-left: #acacad solid 4px;
+		padding-left: 1em;
+	}
+</style>
+
 <!-- navigation: {{ navigation }} -->
 <div class="masthead">
   <div class="masthead__inner-wrap">
