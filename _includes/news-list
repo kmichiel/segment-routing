@@ -4,7 +4,7 @@
   {% assign title = post.title %}
 {% endif %}
 
-<div class="bloglist__item" id="{{ post.url | split: '/' | last }}">
+<div class="bloglist__item" id="{{ post.url | split: '/' | last }}" {% if post.categories.size > 0 %}data-category="{{ post.categories }}{% endif %}">
   <article itemscope itemtype="http://schema.org/CreativeWork">
     {% if post.teaser %}
       <div class="bloglist__item-teaser">

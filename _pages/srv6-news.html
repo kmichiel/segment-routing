@@ -4,9 +4,67 @@ permalink: /SRv6/news/
 title: "News & blog entries"
 ---
 
-{% include base_path %}
-<h1>SRv6</h1>
+{% comment %}
+    {% include base_path %}
+{% endcomment %}
+
+<style>
+    /* filtering idea from https://webdesign.tutsplus.com/tutorials/how-to-build-a-filtering-component-in-pure-css--cms-33111 */
+    /* FILTERED ELEMENTS (POSTS)
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    /* FILTERING RULES
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    [value="All"]:checked ~ .filters [for="All"],
+    [value="SRv6"]:checked ~ .filters [for="SRv6"],
+    [value="SRMPLS"]:checked ~ .filters [for="SRMPLS"] {
+      background-color: #02344f;
+    }
+
+    [value="All"]:checked ~ .bloglist [data-category] {
+      display: block;
+    }
+
+    [value="SRv6"]:checked ~ .bloglist .bloglist__item:not([data-category~="SRv6"]),
+    [value="SRMPLS"]:checked ~ .bloglist .bloglist__item:not([data-category~="SRMPLS"]) {
+      display: none;
+    }
+
+    input[type="radio"] {
+      position: absolute;
+      left: -9999px;
+    }
+
+
+    /* FILTERS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    .filters {
+      margin-bottom: 2rem;
+    }
+
+    .filters * {
+      display: inline-block;
+    }
+
+</style>
+
+    <input type="radio" id="All" name="categories" value="All">
+    <input type="radio" id="SRv6" name="categories" value="SRv6" checked>
+    <input type="radio" id="SRMPLS" name="categories" value="SRMPLS">
+
+    <div class="filters">
+      <div>
+        <label for="All" class="btn btn--large">All</label>
+      </div>
+      <div>
+        <label for="SRv6" class="btn btn--large">SRv6</label>
+      </div>
+      <div>
+        <label for="SRMPLS" class="btn btn--large">SR MPLS</label>
+      </div>
+    </div>
+    <div class="bloglist">
 {% assign sorted = (site.news | sort: post.date | reverse) %}
 {% for post in sorted %}
   {% include news-list %}
 {% endfor %}
+    </div>
