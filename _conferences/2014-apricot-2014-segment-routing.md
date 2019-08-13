@@ -3,9 +3,10 @@ author: Segment Routing Team
 published: true
 breadnav: true
 date: '2014-09-25 22:21 -0700'
-title: 'Apricot 2014:  Segment Routing'
+title: 'Apricot 2014: Segment Routing'
 header:
   teaser: >-
+    /images/2014-apricot-2014-segment-routing.JPG
 excerpt: 'Apricot 2014, Petaling Jaya, Malaysia 18-28 February 2014'
 position: hidden
 categories:
