@@ -1,11 +1,10 @@
 ---
 layout: archive-full
 permalink: /SRv6/demos/
-title: "It's demo time!"
+title: "It's demo time! – SRv6"
 ---
 
 {% include base_path %}
-<h1>SRv6</h1>
 {% assign sorted = (site.demos | sort: post.date | reverse) %}
 {% for post in sorted %}
   {% if post.categories.size > 0 %}
