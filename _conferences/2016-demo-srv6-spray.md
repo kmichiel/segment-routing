@@ -8,7 +8,7 @@ header:
 excerpt: >-
   Watch Jose Liste's demonstration of the SRv6 "spray" multicast use case. Learn how to leverage SRv6 to transport multicast traffic on an IPv6 unicast-only network.
 categories:
-  - SRMPLS
+
   - SRv6
 ---
 Watch Jose Liste's demonstration of the SRv6 "spray" multicast use case. Learn how to leverage SRv6 to transport multicast traffic on an IPv6 unicast-only network.

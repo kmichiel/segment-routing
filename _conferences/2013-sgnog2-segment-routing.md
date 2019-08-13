@@ -9,7 +9,7 @@ header:
   teaser: /images/sgnog.png
 categories:
   - SRMPLS
-  - SRv6
+
 ---
 
 ## Segment Routing Overview  

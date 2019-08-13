@@ -9,7 +9,7 @@ header:
   teaser: 'https://img.youtube.com/vi/lujkWfdB4NM/mqdefault.jpg'
 categories:
   - SRMPLS
-  - SRv6
+
 ---
 
 **Daniel Ginsburg, Yandex (EN)**

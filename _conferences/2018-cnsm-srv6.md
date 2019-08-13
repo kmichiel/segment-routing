@@ -8,7 +8,7 @@ excerpt: 'Clarence Filsfils: SRv6 solution, use-cases, deployments and research 
 header:
   teaser: '/images/20181106-cnsm-srv6.png'
 categories:
-  - SRMPLS
+
   - SRv6
 ---    
 

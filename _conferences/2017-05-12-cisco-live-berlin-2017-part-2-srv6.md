@@ -8,7 +8,7 @@ excerpt: 'Segment Routing: Technology deep-dive and advanced use cases: SRv6'
 header:
   teaser: 'https://img.youtube.com/vi/2wNC3hrWhuM/mqdefault.jpg'
 categories:
-  - SRMPLS
+
   - SRv6
 ---
 <iframe width="355" height="200" src="https://www.youtube.com/embed/2wNC3hrWhuM" frameborder="0" allowfullscreen></iframe>

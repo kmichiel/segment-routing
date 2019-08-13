@@ -1,6 +1,6 @@
 ---
 author: Segment Routing Team
-published: true
+published: false
 breadnav: true
 date: '2013-09-26 01:35 -0700'
 title: 'Nanog 58: Segment Routing - Simplifying the Network'

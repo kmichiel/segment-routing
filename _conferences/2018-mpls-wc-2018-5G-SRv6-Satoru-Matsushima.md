@@ -8,7 +8,7 @@ excerpt: 'Satoru Matsushima: SRv6 for 5G dataplane'
 header:
   teaser: 'https://img.youtube.com/vi/wmHbp1z-6As/mqdefault.jpg'
 categories:
-  - SRMPLS
+
   - SRv6
 ---    
        

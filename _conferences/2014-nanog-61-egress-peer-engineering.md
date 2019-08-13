@@ -10,7 +10,7 @@ header:
     https://networks.nokia.com/sites/live/files/styles/alu_events_node/public/meeting61.jpg?itok=QFIu-IXE
 categories:
   - SRMPLS
-  - SRv6
+
 ---
 
 {% capture "pdf-link" %}https://www.nanog.org/sites/default/files/tuesday_lightning_filsfils_segment.pdf{% endcapture %}

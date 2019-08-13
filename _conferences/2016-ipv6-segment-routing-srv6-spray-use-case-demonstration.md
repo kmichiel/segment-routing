@@ -10,7 +10,7 @@ excerpt: >-
 header:
   teaser: 'https://img.youtube.com/vi/e6wEhJOJ4Vw/mqdefault.jpg'
 categories:
-  - SRMPLS
+
   - SRv6
 ---
 ## “Spray” use case demonstration   

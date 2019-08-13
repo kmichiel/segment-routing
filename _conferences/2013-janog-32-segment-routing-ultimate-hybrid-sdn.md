@@ -9,7 +9,7 @@ header:
   teaser: /images/janog32.png
 categories:
   - SRMPLS
-  - SRv6
+
 ---
 
 ## Segment Routing - Ultimate Hybrid SDN"

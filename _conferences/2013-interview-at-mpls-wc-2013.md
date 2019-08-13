@@ -9,7 +9,7 @@ header:
   teaser: 'https://img.youtube.com/vi/iHqISXXqexg/mqdefault.jpg'
 categories:
   - SRMPLS
-  - SRv6
+
 ---
 ## Interview with Clarence Filsfils at MPLS WC 2013
 

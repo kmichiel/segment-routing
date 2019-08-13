@@ -11,7 +11,7 @@ excerpt: >-
 header:
   teaser: 'https://img.youtube.com/vi/8mwhagiNv9s/mqdefault.jpg'
 categories:
-  - SRMPLS
+
   - SRv6
 ---
 Watch this demo that showcases the first hardware implementation of SRv6 VPN and TE. The hardware-based forwarding is demonstrated on Cisco NCS 5500 Series.

@@ -9,7 +9,7 @@ header:
   teaser: /images/ieice_2013_sdn.png
 categories:
   - SRMPLS
-  - SRv6
+
 ---
 
 ## Moving towards a Software Defined Network with Segment Routing

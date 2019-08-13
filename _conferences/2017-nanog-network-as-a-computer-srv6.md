@@ -8,7 +8,7 @@ excerpt: 'Gaurav Dawra gives an overview of SRv6 and the concept of network as a
 header:
   teaser: 'https://img.youtube.com/vi/ZUN68P6UAn0/mqdefault.jpg'
 categories:
-  - SRMPLS
+
   - SRv6
 ---    
        

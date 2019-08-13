@@ -9,7 +9,7 @@ header:
   teaser: 'https://img.youtube.com/vi/wu-paQOqaxA/mqdefault.jpg'
 categories:
   - SRMPLS
-  - SRv6
+
 ---    
        
 <iframe width="355" height="200" src="https://www.youtube.com/embed/wu-paQOqaxA" frameborder="0" allowfullscreen></iframe>
