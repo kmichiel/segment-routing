@@ -10,4 +10,6 @@ excerpt: >-
 
   With Ixia’s IxNetwork SRv6 solution, customers can simulate SRv6 networks with many nodes to validate device under test (DUT) functions in different roles (ingress node, intermediate node, and egress node) and assess the performance for both control- and data-plane...
 teaser: https://www.ixiacom.com/sites/default/files/inline-images/SR1.png
+categories:
+  - SRv6
 ---

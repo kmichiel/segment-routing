@@ -11,5 +11,7 @@ excerpt: >-
   service provider’s Emirates Internet Exchange (EMIX) network, deploying cutting-edge technologies that set the foundation 
   for new opportunities and business models.
 teaser: https://emear.thecisconetwork.com/media/file-20190421051521-4839.jpg
+categories:
+  - SRMPLS
 ---
 

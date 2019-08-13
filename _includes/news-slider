@@ -210,16 +210,26 @@ scroll-snap-align: start;
 
   {% comment %}
   title and link should be based on categories:
-       SRv6 or SRv6 + SRMPLA -> SRv6
+       SRv6 -> SRv6
+       SRv6 + SRMPLS -> SR
        SRMPLS -> SR-MPLS
        no category -> SR-MPLS
   {% endcomment %}
   {% if item.categories contains "SRv6" %}
     {% assign channel-name = "SRv6" %}
     {% assign channel-url = "/SRv6/news/" | relative_url %}
+    {% if item.categories contains "SRMPLS" %}
+      {% assign channel-name = "SR " %}
+      {% assign channel-url = "/news/" | relative_url %}
+    {% endif %}
   {% else %}
-    {% assign channel-name = "SR MPLS" %}
-    {% assign channel-url = "/news/" | relative_url %}
+    {% if item.categories contains "SRMPLS" %}
+      {% assign channel-name = "SR MPLS" %}
+      {% assign channel-url = "/news/" | relative_url %}
+    {% else %}
+      {% assign channel-name = "SR " %}
+      {% assign channel-url = "/news/" | relative_url %}
+    {% endif %}
   {% endif %}
 
 {% comment %}
