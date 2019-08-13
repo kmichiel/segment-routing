@@ -17,6 +17,48 @@ teaser : url of image
 {% assign excerpt-max-length = 13 %}
 
 <style>
+#news-slider-container {
+  margin-bottom: 1em;
+  position: relative;
+}
+
+/*#news-slider-container .btn {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  top:0;
+  bottom:0;
+  margin-top: auto;
+  margin-bottom: auto;
+}*/
+
+#news-slider-container .btn-right {
+  right:0;
+  margin-right: -19px;
+}
+
+#news-slider-container .btn-left {
+  left:0;
+  margin-left: -19px;
+}
+
+span.right-arrow {
+    display: inline-block;
+    fill: currentColor;
+    height: 24px;
+    line-height: 24px;
+    position: relative;
+    width: 24px;
+    color: #1a0dab;
+    flex: none;
+    margin-right: 8px;
+    #color: rgba(0,0,0,.54);
+    float: left;
+    margin: -2px 24px -2px 0;
+    font-size: 13px;
+    line-height: 1.54;
+}
+
 #news-slider {
 	// height: 200px;
 	width: 100%;
@@ -24,11 +66,20 @@ teaser : url of image
 	flex-wrap: nowrap;
 	overflow-x: auto;
         margin-bottom: 1em;
-//	-webkit-overflow-scrolling: touch;
-//        -ms-overflow-style: -ms-autohiding-scrollbar;
+        position: relative;
+        scrollbar-width: none;
+	-webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+   /* snap mandatory on horizontal axis  */
+  scroll-snap-type: x mandatory;
+}
+#news-slider::-webkit-scrollbar {
+  display: none;
 }
 
 #news-slider .news-slider-news-item {
+/* snap align left */
+scroll-snap-align: start;
 	flex: 0 0 auto;
 	width: 90%;
 }
@@ -152,7 +203,8 @@ teaser : url of image
 }
 </style>
 
-<div id="news-slider" class="news-slider-container">
+<div id="news-slider-container">
+<div id="news-slider">
 
   {% for item in news_items limit: 10 %}
 
@@ -231,3 +283,72 @@ Not used here, the slider item links to the news item via anchor
   {% endfor %}
 
 </div>
+<!--<div>
+  <a href="#">
+    <span class="right-arrow">
+      <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z">
+        </path>
+      </svg>
+    </span>
+go to all news items
+  </a>
+</div>
+<div class="btn btn-right next" style="text-align:center;"><i class="fa fa-arrow-right"></i></span>
+</div>
+<div class="btn btn-left prev">LEFT</div>
+-->
+<style>
+.btn-circle {
+    width: 2.5em;
+    height: 2.5em;
+    padding: 0.5em 0px;
+    border-radius: 2em;
+    text-align: center;
+    font-size: 1em;
+    position:absolute;
+    top:0;
+    bottom:0;
+    margin-top:auto;
+    margin-bottom:auto;
+	/* Set the buttons invisible by default */
+	opacity: 0.8;
+	transition: opacity .3s;
+}
+.btn-circle.next {
+   right:0;
+    margin-right: -1.25em;
+	[data-overflowing="both"] ~ &,
+	[data-overflowing="left"] ~ & {
+		opacity: 1;
+	}
+}
+.btn-circle.prev {
+    left:0;
+    margin-left: -1.25em;
+	[data-overflowing="both"]  ~ &,
+	[data-overflowing="right"] ~ & {
+		opacity: 1;
+	}
+}
+</style>
+<div class="btn btn-circle next"><i class="fa fa-arrow-right"></i></div>
+<div class="btn btn-circle prev"><i class="fa fa-arrow-left"></i></div>
+</div>
+<script>
+const gallery = document.querySelector('#news-slider-container');
+const gallery_scroller = gallery.querySelector('#news-slider');
+const gallery_item_size = gallery_scroller.querySelector('div').clientWidth;
+
+// For paginated scrolling, simply scroll the gallery one item in the given
+// direction and let css scroll snaping handle the specific alignment.
+function scrollToNextPage() {
+  gallery_scroller.scrollBy(gallery_item_size, 0);
+}
+function scrollToPrevPage() {
+  gallery_scroller.scrollBy(-gallery_item_size, 0);
+}
+gallery.querySelector('.btn-circle.next').addEventListener('click', scrollToNextPage);
+gallery.querySelector('.btn-circle.prev').addEventListener('click', scrollToPrevPage);
+
+</script>
