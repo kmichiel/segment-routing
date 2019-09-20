@@ -8,5 +8,7 @@ eurl: https://www.businesswire.com/news/home/20190827005512/en/PacketFabric-Secu
 excerpt: >-
   PacketFabric has secured a joint venture funding with Digital Alpha Advisors to advance the development of innovate network connection technologies that meet the needs of enterprises deploying next generation networks. As part of this investment, the network will evolve towards a more flexible and scalable Segment Routing (SR-MPLS) architecture. 
 
+categories:
+  - SRMPLS
 teaser: https://www.packetfabric.com/assets/images/logo/packetfabric-logo.svg
 ---
