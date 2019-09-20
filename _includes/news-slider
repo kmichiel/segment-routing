@@ -202,6 +202,37 @@ scroll-snap-align: start;
 }
 }
 </style>
+<style>
+.btn-circle {
+    width: 2.5em;
+    height: 2.5em;
+    padding: 0.5em 0px;
+    border-radius: 2em;
+    text-align: center;
+    font-size: 1em;
+    position:absolute;
+    top:0;
+    bottom:0;
+    margin-top:auto;
+    margin-bottom:auto;
+    opacity: 0.8;
+    transition: opacity .3s;
+}
+
+.btn-circle.hideme {
+    opacity: 0;
+}
+
+.btn-circle.next {
+    right:0;
+    margin-right: -1.25em;
+}
+
+.btn-circle.prev {
+    left:0;
+    margin-left: -1.25em;
+}
+</style>
 
 <div id="news-slider-container">
 <div id="news-slider">
@@ -293,55 +324,6 @@ Not used here, the slider item links to the news item via anchor
   {% endfor %}
 
 </div>
-<!--<div>
-  <a href="#">
-    <span class="right-arrow">
-      <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z">
-        </path>
-      </svg>
-    </span>
-go to all news items
-  </a>
-</div>
-<div class="btn btn-right next" style="text-align:center;"><i class="fa fa-arrow-right"></i></span>
-</div>
-<div class="btn btn-left prev">LEFT</div>
--->
-<style>
-.btn-circle {
-    width: 2.5em;
-    height: 2.5em;
-    padding: 0.5em 0px;
-    border-radius: 2em;
-    text-align: center;
-    font-size: 1em;
-    position:absolute;
-    top:0;
-    bottom:0;
-    margin-top:auto;
-    margin-bottom:auto;
-	/* Set the buttons invisible by default */
-	opacity: 0.8;
-	transition: opacity .3s;
-}
-.btn-circle.next {
-   right:0;
-    margin-right: -1.25em;
-	[data-overflowing="both"] ~ &,
-	[data-overflowing="left"] ~ & {
-		opacity: 1;
-	}
-}
-.btn-circle.prev {
-    left:0;
-    margin-left: -1.25em;
-	[data-overflowing="both"]  ~ &,
-	[data-overflowing="right"] ~ & {
-		opacity: 1;
-	}
-}
-</style>
 <div class="btn btn-circle next"><i class="fa fa-arrow-right"></i></div>
 <div class="btn btn-circle prev"><i class="fa fa-arrow-left"></i></div>
 </div>
@@ -352,13 +334,55 @@ const gallery_item_size = gallery_scroller.querySelector('div').clientWidth;
 
 // For paginated scrolling, simply scroll the gallery one item in the given
 // direction and let css scroll snaping handle the specific alignment.
-function scrollToNextPage() {
+function scrollToNextItem() {
   gallery_scroller.scrollBy(gallery_item_size, 0);
 }
-function scrollToPrevPage() {
+function scrollToPrevItem() {
   gallery_scroller.scrollBy(-gallery_item_size, 0);
 }
-gallery.querySelector('.btn-circle.next').addEventListener('click', scrollToNextPage);
-gallery.querySelector('.btn-circle.prev').addEventListener('click', scrollToPrevPage);
+gallery.querySelector('.btn-circle.next').addEventListener('click', scrollToNextItem);
+gallery.querySelector('.btn-circle.prev').addEventListener('click', scrollToPrevItem);
+
+// scrolling code
+// Test via a getter in the options object to see if the passive property is accessed
+var supportsPassive = false;
+try {
+  var opts = Object.defineProperty({}, 'passive', {
+    get: function() {
+      supportsPassive = true;
+    }
+  });
+  window.addEventListener("testPassive", null, opts);
+  window.removeEventListener("testPassive", null, opts);
+} catch (e) {}
+
+// Use our detect's results. passive applied if supported, capture will be false either way.
+//elem.addEventListener('touchstart', fn, supportsPassive ? { passive: true } : false);
+
+var objTable = document.querySelector("#news-slider");
+// completely to the right
+var maxScrollLeft = objTable.scrollWidth - objTable.clientWidth;
+// completely to the left
+var minScrollLeft = 0;
+
+objTable.addEventListener("scroll", function () {
+    hideUnhideButtons();
+}, supportsPassive ? { passive: true } : false);
+
+function hideUnhideButtons() {
+    if (objTable.scrollLeft == minScrollLeft) {
+        gallery.querySelector('.btn-circle.prev').classList.add("hideme");
+    } else {
+        gallery.querySelector('.btn-circle.prev').classList.remove("hideme");
+    }
+    if (objTable.scrollLeft == maxScrollLeft) {
+        gallery.querySelector('.btn-circle.next').classList.add("hideme");
+    } else {
+        gallery.querySelector('.btn-circle.next').classList.remove("hideme");
+    }
+}
+
+// run it
+hideUnhideButtons();
 
 </script>

@@ -43,6 +43,9 @@ srmpls:
   - title: "SRv6"
     url: "/SRv6/"
 
+  - title: "SR MPLS"
+    url: "/SRMPLS/"
+
   - title: "News"
     url: "/news/"
 
@@ -69,6 +72,9 @@ srmpls:
 
 # navigation on SRv6 pages
 srv6:
+
+  - title: "SRv6"
+    url: "/SRv6/"
 
   - title: "SR MPLS"
     url: "/SRMPLS/"

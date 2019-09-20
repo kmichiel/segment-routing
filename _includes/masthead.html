@@ -9,11 +9,13 @@
 	li.masthead__menu-item.masthead__menu-item--lg {
 		padding-right: initial;
 	}
-	li.masthead__menu-item:nth-child(3) {
-		padding-right: 1em;
+	li.masthead__menu-item:nth-child(3), li.masthead__menu-item:nth-child(4) {
 		font-weight: 400;
 	}
 	li.masthead__menu-item:nth-child(4) {
+		padding-right: 1em;
+	}
+	li.masthead__menu-item:nth-child(5) {
 		border-left: #acacad solid 1px;
 		padding-left: 1em;
 	}
@@ -35,7 +37,25 @@
               {% assign domain = site.url | append: site.baseurl %}
             {% endif %}
 
+	    {% comment %}
+	    <!-- page.url = {{ page.url }} ; link.url = {{ link.url }} -->
+	    {% endcomment %}
+
+            {% assign underline = false %}
             {% if page.url contains link.url %}
+	      {% assign underline = true %}
+            {% elsif link.url == '/SRMPLS/' %}
+	      {% unless page.url contains '/SRv6/' %}
+                {% assign underline = true %}
+              {% endunless %}
+	    {% endif %}
+            {% if page.url contains '/news/' or page.url contains '/open-software/' or page.url contains '/scientific-papers/' %}
+	      {% if link.url == '/SRv6/' or link.url == '/SRMPLS/' %}
+	        {% assign underline = false %}
+              {% endif %}
+            {% endif %}
+
+	    {% if underline == true %}
               <li class="masthead__menu-item greedy-nav-active"><a href="{{ '' | relative_url }}{{ link.url }}">
                 {% if link.short %}
                 <span class="lg-view">{{ link.title }}</span>
